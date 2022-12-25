@@ -1,6 +1,6 @@
 import React from "react";
-import StorybookUIRoot from "./.ondevice/Storybook";
 import { Platform, StatusBar, View } from "react-native";
+import StorybookUIRoot from "./.storybook-ondevice/Storybook";
 
 export default () => (
   <View

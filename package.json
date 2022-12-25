@@ -1,15 +1,15 @@
 {
   "name": "react-native-flex-grid",
   "version": "0.0.1",
-  "main": "main/index.ts",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "yarn update-stories; expo start",
     "android": "yarn update-stories; expo start --android",
     "ios": "yarn update-stories; expo start --ios",
     "web": "yarn update-stories; expo start --web",
     "eject": "expo eject",
-    "update-stories": "sb-rn-get-stories --config-path .ondevice",
-    "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
+    "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
+    "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

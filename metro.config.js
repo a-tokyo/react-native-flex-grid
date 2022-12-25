@@ -12,5 +12,5 @@ defaultConfig.transformer.getTransformOptions = async () => ({
     inlineRequires: false,
   },
 });
-defaultConfig.watchFolders = [...defaultConfig.watchFolders, "./.ondevice"];
+defaultConfig.watchFolders = [...defaultConfig.watchFolders, "./.storybook-ondevice"];
 module.exports = defaultConfig;
