@@ -12,6 +12,6 @@ const editJsonFile = require('edit-json-file');
 const file = editJsonFile(`package.json`);
 
 // Set a couple of fields
-file.set('main', 'src/index.ts');
+file.set('main', file.data.module || 'src/index.ts');
 
 file.save();
