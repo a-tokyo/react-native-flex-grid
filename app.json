@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "expo-storybook-starter",
-    "slug": "expo-storybook-starter",
-    "version": "1.0.0",
+    "name": "react-native-flex-grid",
+    "slug": "react-native-flex-grid",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
