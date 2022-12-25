@@ -5,13 +5,13 @@
  * - However, that won’t work for an NPM package which must be a JavaScript file contained in the package, and typically is set to “index.js”.
  * - This means that the “main” value must change prior to NPM publishing and then change again prior to running the Expo application that encompasses the package.
  */
-
 const editJsonFile = require('edit-json-file');
 
-// If the file doesn't exist, the content will be an empty object by default.
-const file = editJsonFile(`package.json`);
+/** package.json */
+const packageJsonFile = editJsonFile('package.json');
 
-// Set a couple of fields
-file.set('main', file.data.module || 'src/index.ts');
+// Update `main` field to support npm package instead of expo dev
+packageJsonFile.set('main', file.data.module || 'src/index.ts');
 
-file.save();
+// Save file
+packageJsonFile.save();
