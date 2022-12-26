@@ -1,6 +1,7 @@
 node_modules/
 .expo/
 dist/
+lib/
 npm-debug.*
 *.jks
 *.p8

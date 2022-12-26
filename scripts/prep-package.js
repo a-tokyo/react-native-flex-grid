@@ -11,7 +11,10 @@ const editJsonFile = require('edit-json-file');
 const packageJsonFile = editJsonFile('package.json');
 
 // Update `main` field to support npm package instead of expo dev
-packageJsonFile.set('main', file.data.module || 'src/index.ts');
+packageJsonFile.set(
+  'main',
+  packageJsonFile.data.module?.replace('module', 'commonsjs') || 'lib/commonjs/index.js',
+);
 
 // Save file
 packageJsonFile.save();
