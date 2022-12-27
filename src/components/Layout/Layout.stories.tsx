@@ -34,10 +34,10 @@ const LayoutStory = () => (
         </Text>
       </Col>
       <Col xs="auto">
-      <Text>.col-auto - variable width content</Text>
+        <Text>.col-auto - variable width content</Text>
       </Col>
       <Col xs="3">
-      <Text>.col-3</Text>
+        <Text>.col-3</Text>
       </Col>
     </Row>
     <Row>

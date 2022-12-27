@@ -3,6 +3,8 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 
 export declare interface ContainerProps extends ViewProps {
   Element?: React.ElementType;
+  /** Fluid Container */
+  fluid?: boolean;
 };
 
 const styles = StyleSheet.create({
@@ -11,6 +13,7 @@ const styles = StyleSheet.create({
   }
 });
 
+/** Container */
 const Container = ({ style, Element = View, ...rest }: ContainerProps) => (
   <Element style={styles.container} {...rest} />
 );
