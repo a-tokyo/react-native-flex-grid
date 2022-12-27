@@ -96,3 +96,14 @@ export const setContainerMaxWidthsMap = (containerMaxWidthsMap) => {
   CONTAINERS_MAX_WIDTHS_MAP = containerMaxWidthsMap;
   return CONTAINERS_MAX_WIDTHS_MAP;
 };
+
+const GRID_CONFIG = {
+  breakpoints: {
+
+  },
+  colCount: 12,
+  gutter: 24,
+  containerMaxWidths: {
+
+  },
+};

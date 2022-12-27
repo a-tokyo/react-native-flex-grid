@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row /> renders basic props correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "width": "100%",
+      },
+      {
+        "marginHorizontal": -12,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

@@ -1,7 +1,7 @@
 {
   "name": "react-native-flex-grid",
   "version": "0.0.1",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "lib/commonsjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
     "build": "bob build",
     "prep-package": "node ./scripts/prep-package.js",
     "prepublish": "yarn prep-package build",
-    "test": "yarn",
+    "test": "jest",
     "eject": "expo eject",
     "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
@@ -26,6 +26,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-private-property-in-object": "^7.20.5",
     "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-native-community/datetimepicker": "6.5.2",
@@ -49,13 +50,19 @@
     "@storybook/react-native": "6.0.1-beta.9",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.15",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^29.2.4",
     "@types/react-native": "~0.70.6",
+    "babel-jest": "^29.3.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.18.10",
     "edit-json-file": "^1.7.0",
     "expo": "^47.0.0",
     "expo-status-bar": "~1.4.2",
+    "jest": "^29.3.1",
     "postcss": "^8.4.20",
     "postcss-loader": "^7.0.2",
     "react": "18.1.0",
@@ -64,6 +71,7 @@
     "react-native-builder-bob": "^0.20.3",
     "react-native-safe-area-context": "4.4.1",
     "react-native-web": "~0.18.7",
+    "react-test-renderer": "^18.2.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
@@ -71,6 +79,7 @@
     "storybook-addon-grid": "^0.3.1",
     "storybook-usage": "^4.0.10",
     "style-loader": "^3.3.1",
+    "ts-jest": "^29.0.3",
     "typescript": "^4.6.3"
   },
   "react-native-builder-bob": {
@@ -86,5 +95,6 @@
       "module",
       "typescript"
     ]
-  }
+  },
+  "license": "MIT"
 }
