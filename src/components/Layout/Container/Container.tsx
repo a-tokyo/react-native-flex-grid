@@ -4,10 +4,12 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 import { getGridBreakpoint, getContainerPaddingHorizontalMap, getContainerMaxWidthsMap } from '../../../utils/responsive';
 
 export declare interface ContainerProps extends ViewProps {
-  Element?: React.ElementType;
   /** Fluid Container */
   fluid?: boolean;
+  /** No Padding */
   noPadding?: boolean;
+  /** Element to render */
+  Element?: React.ElementType;
 };
 
 const styles = StyleSheet.create({
