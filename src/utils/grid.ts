@@ -33,7 +33,9 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
   },
   /** Grid column count */
   colCount: 12,
+  /** Grid gutter */
   gutter: 24,
+  /** Common gutters used */
   gutters: {
     0: 0,
     1: SPACER * 0.25,
