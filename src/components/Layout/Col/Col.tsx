@@ -24,6 +24,16 @@ export declare interface ColProps extends ViewProps {
   lgOffset?: number | string;
   /** xl offset */
   xlOffset?: number | string;
+  /** xs order */
+  xsOrder?: number | string;
+  /** sm order */
+  smOrder?: number | string;
+  /** md order */
+  mdOrder?: number | string;
+  /** lg order */
+  lgOrder?: number | string;
+  /** xl order */
+  xlOrder?: number | string;
   /** Element to render */
   Element?: React.ElementType;
   /** Gutter */
@@ -50,6 +60,7 @@ export const getColStyle = (props): Object => {
     width?: string | number;
     marginLeft?: string | number;
     flex?: string | number;
+    order?: number;
   } = {};
 
   // handle size
@@ -104,7 +115,24 @@ export const getColStyle = (props): Object => {
     }
   }
 
-  // @todo handle order
+  // handle order
+  for (
+    let i = GRID_BREAKPOINTS_KEYS_LIST.indexOf(gridBreakpoint);
+    i < GRID_BREAKPOINTS_KEYS_LIST.length;
+    i += 1
+  ) {
+    const element = `${GRID_BREAKPOINTS_KEYS_LIST[i]}Order`;
+    if (
+      typeof props[element] === 'number' ||
+      typeof props[element] === 'string'
+    ) {
+      style = {
+        ...style,
+        order: Number(props[element]),
+      }
+      break;
+    }
+  }
 
   return style;
 };

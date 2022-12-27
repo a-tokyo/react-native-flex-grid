@@ -60,8 +60,11 @@ const LayoutStory = () => (
       </Col>
     </Row>
     <Row>
-      <Col sm={6} smOrder={2} smOffset={1}>
-        <Text>.col-sm-6 .order-sm-2 .offset-sm-1</Text>
+      <Col sm={5} smOrder={2} smOffset={1}>
+        <Text>.col-sm-5 .order-sm-2 .offset-sm-1</Text>
+      </Col>
+      <Col sm={5} smOrder={1} smOffset={1}>
+        <Text>.col-sm-5 .order-sm-1 .offset-sm-1</Text>
       </Col>
     </Row>
     <Row>
