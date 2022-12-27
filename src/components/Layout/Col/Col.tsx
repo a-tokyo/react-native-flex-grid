@@ -46,7 +46,7 @@ const _toPercent = (num: number): string => `${num * 100}%`;
 /** 
  * Gets column style
  */
-export const getColStyle = (props): Object => {
+const _getColStyle = (props): Object => {
   const gridBreakpoint = getGridBreakpoint();
 
   /** style object */
@@ -137,7 +137,7 @@ const Col = (props: ColProps) => {
   const { style, Element = View, gx = 4, ...rest } = props;
   return (<Element style={[gx ? {
     paddingHorizontal: getConfig().gutters[gx] / 2,
-  } : undefined, getColStyle(props), style]} {...rest} />);
+  } : undefined, _getColStyle(props), style]} {...rest} />);
 }
 
 export default Col;
