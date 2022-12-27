@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, ViewProps } from 'react-native';
 
-import { getGridBreakpoint, getContainerPaddingHorizontalMap } from '../../../utils/responsive';
+import { getGridBreakpoint, getContainerPaddingHorizontalMap, getContainerMaxWidthsMap } from '../../../utils/responsive';
 
 export declare interface ContainerProps extends ViewProps {
   Element?: React.ElementType;
@@ -11,18 +11,30 @@ export declare interface ContainerProps extends ViewProps {
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    width: '100%',
+  },
+  fluid: {
+    maxWidth: '100%',
+  }
 });
 
 /** Container */
-const Container = ({ style, Element = View, noPadding, ...rest }: ContainerProps) => (
-  <Element
-    style={[
-      styles.container,
-      noPadding ? null : { paddingHorizontal: getContainerPaddingHorizontalMap()[getGridBreakpoint()] },
-    ]}
-    {...rest}
-  />
-);
+const Container = ({ style, fluid, Element = View, noPadding, ...rest }: ContainerProps) => {
+  const gridBreakpoint = getGridBreakpoint()
+  return (
+    <Element
+      style={[
+        styles.container,
+        noPadding ? null : { paddingHorizontal: getContainerPaddingHorizontalMap()[gridBreakpoint] },
+        fluid ? styles.fluid : {
+          ...styles.container,
+          maxWidth: getContainerMaxWidthsMap[gridBreakpoint],
+        },
+      ]}
+      {...rest}
+    />
+  );
+}
 
 export default Container;

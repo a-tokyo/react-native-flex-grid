@@ -9,6 +9,14 @@ export declare interface GridBreakpointsType {
   xl: number;
 }
 
+let CONTAINERS_MAX_WIDTHS_MAP = {
+  xs: '100%',
+  sm: '100%',
+  md: '100%',
+  lg: '100%',
+  xl: 1140,
+};
+
 /** Grid Gutter */
 let GRID_GUTTER: number = 24;
 
@@ -81,4 +89,10 @@ export const getContainerPaddingHorizontalMap = () => CONTAINER_PADDING_HORIZONT
 export const setContainerPaddingHorizontalMap = (containerPaddingHorizontalMap) => {
   CONTAINER_PADDING_HORIZONTAL_MAP = containerPaddingHorizontalMap;
   return CONTAINER_PADDING_HORIZONTAL_MAP;
+};
+
+export const getContainerMaxWidthsMap = () => CONTAINERS_MAX_WIDTHS_MAP;
+export const setContainerMaxWidthsMap = (containerMaxWidthsMap) => {
+  CONTAINERS_MAX_WIDTHS_MAP = containerMaxWidthsMap;
+  return CONTAINERS_MAX_WIDTHS_MAP;
 };
