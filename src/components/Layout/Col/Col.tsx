@@ -89,6 +89,7 @@ export const getColStyle = (props): Object => {
     }
   }
 
+  // if no width was assigned -> handle as `auto`
   if (style.width === undefined) {
     style = {
       ...style,
