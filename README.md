@@ -7,7 +7,7 @@ A react-native flexbox grid similar to [bootstap](https://getbootstrap.com)'s we
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=ahmad_tokyo"><img src="https://img.shields.io/twitter/follow/ahmad_tokyo.svg?label=Follow%20@ahmad_tokyo" alt="Follow @ahmad_tokyo"></img></a>
 
-[DEMO](https://react-native-flex-grid.netlify.app)
+Check the [DEMO](https://react-native-flex-grid.netlify.app), built with [Storybook](https://storybook.js.org) and [react-native-web](https://necolas.github.io/react-native-web).
 
 # Getting Started
 
@@ -20,29 +20,88 @@ npm install react-native-flex-grid
 yarn add install react-native-flex-grid
 ```
 
-### Import
-
-```
-import { Container, Row, Col } from 'react-native-flex-grid';
-```
-
 ### Basic Example
 
 ```jsx
-<Container>        
-  <Row size={12}>
-    <Col sm={6} md={4} lg={3}>
-      <Text>
-        First Column
-      </Text>
-    </Col>
-    <Col sm={6} md={4} lg={3}>
-      <Text>
-        Second Column
-      </Text>
-    </Col>
-  </Row>      
-</Container>
+import { Container, Row, Col } from 'react-native-flex-grid';
+
+const MyComponent = (
+  <Container fluid>        
+    <Row>
+      <Col sm={6} md={4} lg={3}>
+        <Text>
+          First Column
+        </Text>
+      </Col>
+      <Col sm={6} md={4} lg={3}>
+        <Text>
+          Second Column
+        </Text>
+      </Col>
+    </Row>
+  </Container>
+);
+
+export default MyComponent;
+```
+
+### Modifying Grid Configuration
+The grid is 100% modifiable, all values can be found in the config object in `src/utils/grid`;
+
+```js
+/** Grid configuration */
+let GRID_CONFIG: GRID_CONFIG_TYPE = {
+  /** Grid Breakpoints */
+  breakpoints: {
+    xs: 0,
+    sm: 375,
+    md: 768,
+    lg: 1024,
+    xl: 1200,
+  },
+  /** Grid column count */
+  colCount: 12,
+  /** Common gutters used */
+  gutters: {
+    0: 0,
+    1: SPACER * 0.25,
+    2: SPACER * 0.5,
+    3: SPACER,
+    4: SPACER * 1.5,
+    5: SPACER * 3,
+  },
+  /** Container max widths */
+  containerMaxWidths: {
+    xs: '100%',
+    sm: '100%',
+    md: '100%',
+    lg: '100%',
+    xl: 1140,
+  },
+  /** Container paddings horizontal */
+  containerPaddingsHorizontal: {
+    xs: 18,
+    sm: 20,
+    md: 40,
+    lg: 48,
+    xl: 48,
+  },
+};
+```
+
+To modify grid configuration, add this line somewhere in your app before rendering the grid, eg: in App.js or in wrapper components:
+```js
+import { setConfig } from 'react-native-flex-grid';
+
+setConfig({
+  breakpoints: {
+    xs: 0,
+    sm: 390,
+    md: 768,
+    lg: 1024,
+    xl: 1024,
+  },
+});
 ```
 
 ### Helpful resources
