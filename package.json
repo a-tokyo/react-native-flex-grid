@@ -16,6 +16,7 @@
     "build": "bob build",
     "prep-package": "node ./scripts/prep-package.js",
     "prepublish": "yarn prep-package build",
+    "test": "yarn",
     "eject": "expo eject",
     "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",

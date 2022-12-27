@@ -7,6 +7,8 @@ A react-native flexbox grid similar to [bootstap](https://getbootstrap.com)'s we
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=ahmad_tokyo"><img src="https://img.shields.io/twitter/follow/ahmad_tokyo.svg?label=Follow%20@ahmad_tokyo" alt="Follow @ahmad_tokyo"></img></a>
 
+[DEMO](https://react-native-flex-grid.netlify.app)
+
 # Getting Started
 
 ### Installation
