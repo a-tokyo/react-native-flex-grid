@@ -89,7 +89,7 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
 };
 ```
 
-To modify grid configuration, add this line somewhere in your app before rendering the grid, eg: in App.js or in wrapper components:
+To modify grid configuration, add these lines somewhere in your app before rendering the grid, eg: in App.js or in wrapper components:
 ```js
 import { setConfig } from 'react-native-flex-grid';
 
@@ -100,6 +100,15 @@ setConfig({
     md: 768,
     lg: 1024,
     xl: 1024,
+  },
+  colCount: 4,
+  gutters: {
+    0: 0,
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 20,
   },
 });
 ```
