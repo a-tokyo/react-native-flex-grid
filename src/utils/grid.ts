@@ -12,7 +12,6 @@ export declare interface GridBreakpointsType {
 export declare interface GRID_CONFIG_TYPE {
   breakpoints: { [key in GridBreakpointType]: number };
   colCount: number;
-  gutter: number;
   gutters: { [key: number]: number };
   containerMaxWidths: { [key in GridBreakpointType]: number | string };
   containerPaddingsHorizontal: { [key in GridBreakpointType]: number | string };
@@ -33,8 +32,6 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
   },
   /** Grid column count */
   colCount: 12,
-  /** Grid gutter */
-  gutter: 24,
   /** Common gutters used */
   gutters: {
     0: 0,
