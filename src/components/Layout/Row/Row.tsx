@@ -4,7 +4,7 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 import { GUTTERS } from '../../../utils/responsive';
 
 export declare interface RowProps extends ViewProps {
-  /** Gutter */
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
 };
 

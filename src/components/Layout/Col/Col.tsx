@@ -36,7 +36,7 @@ export declare interface ColProps extends ViewProps {
   xlOrder?: number | string;
   /** Element to render */
   Element?: React.ElementType;
-  /** Gutter */
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
 };
 

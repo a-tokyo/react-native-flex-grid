@@ -1,7 +1,7 @@
 {
   "name": "react-native-flex-grid",
   "version": "0.0.1",
-  "main": "lib/commonsjs/index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "files": [
@@ -9,12 +9,13 @@
     "lib"
   ],
   "scripts": {
-    "start": "yarn update-stories; expo start",
-    "android": "yarn update-stories; expo start --android",
-    "ios": "yarn update-stories; expo start --ios",
-    "web": "yarn update-stories; expo start --web",
+    "start": "yarn prep-package expo; yarn update-stories; expo start",
+    "android": "yarn prep-package expo; yarn update-stories; expo start --android",
+    "ios": "yarn prep-package expo; yarn update-stories; expo start --ios",
+    "web": "yarn prep-package expo; yarn update-stories; expo start --web",
     "build": "bob build",
-    "prepublish": "node ./scripts/prep-package.js",
+    "prep-package": "node ./scripts/prep-package.js",
+    "prepublish": "yarn prep-package build",
     "eject": "expo eject",
     "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
