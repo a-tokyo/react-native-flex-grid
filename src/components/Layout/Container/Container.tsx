@@ -3,7 +3,7 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 import { Dimensions } from 'react-native';
 
 
-import { getGridBreakpoint, getConfig } from '../../../utils/responsive';
+import { getGridBreakpoint, getConfig } from '../../../utils/grid';
 
 export declare interface ContainerProps extends ViewProps {
   /** Fluid Container */

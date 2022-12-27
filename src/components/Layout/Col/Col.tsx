@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ViewProps } from 'react-native';
 
-import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint, getGridColCount } from '../../../utils/responsive';
+import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint, getGridColCount } from '../../../utils/grid';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */

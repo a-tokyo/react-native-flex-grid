@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, ViewProps } from 'react-native';
 
-import { getConfig } from '../../../utils/responsive';
+import { getConfig } from '../../../utils/grid';
 
 export declare interface RowProps extends ViewProps {
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
