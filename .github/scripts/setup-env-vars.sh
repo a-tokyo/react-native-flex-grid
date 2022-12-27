@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "🚧 setup-env-vars"
+
+# Github Actions env vars
+CI_BASHENV=$GITHUB_ENV
+GIT_BRANCH=$GITHUB_REF_NAME
+BUILD_NUM=$GITHUB_RUN_NUMBER
+
+STORYBOOK_NETLIFY_ALIAS="preview-$GITHUB_EVENT_NUMBER"
+STORYBOOK_NETLIFY_ENVIRONMENT="qa"
+
+# production
+if [[ "$GIT_BRANCH" == "main" ]]; then
+  STORYBOOK_NETLIFY_ALIAS=""
+  STORYBOOK_NETLIFY_ENVIRONMENT="production"
+fi
+
+# Presist variables in Normal Bash env
+export STORYBOOK_NETLIFY_ALIAS
+export STORYBOOK_NETLIFY_ENVIRONMENT
+
+echo "CI_BASHENV $CI_BASHENV"
+
+if [[ "$CI_BASHENV" != "" ]]; then 
+  echo "🚧 exporting env vars to CI bash env"
+  # Presist variables in CI Bash env
+  echo "$CI_BASHENV_EXPORT_PREFIX""STORYBOOK_NETLIFY_ALIAS=$STORYBOOK_NETLIFY_ALIAS" >> $CI_BASHENV
+  echo "$CI_BASHENV_EXPORT_PREFIX""STORYBOOK_NETLIFY_ENVIRONMENT=$STORYBOOK_NETLIFY_ENVIRONMENT" >> $CI_BASHENV
+fi
