@@ -87,5 +87,5 @@ export const getGridBreakpoint = (): GridBreakpointType => {
       return GRID_BREAKPOINTS_KEYS_LIST[i];
     }
   }
-  return 'xs';
+  return GRID_BREAKPOINTS_KEYS_LIST[0];
 };
