@@ -20,7 +20,7 @@ let GRID_BREAKPOINTS: {
   [key in GridBreakpointType]: number;
 } = {
   xs: 0,
-  sm: 0,
+  sm: 375,
   md: 768,
   lg: 1024,
   xl: 1200,
