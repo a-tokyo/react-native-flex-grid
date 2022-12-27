@@ -26,6 +26,14 @@ let GRID_BREAKPOINTS: {
   xl: 1200,
 };
 
+let CONTAINER_PADDING_HORIZONTAL_MAP = {
+  xs: 18,
+  sm: 20,
+  md: 40,
+  lg: 48,
+  xl: 48,
+};
+
 /** Grid Breakpoints keys list */
 // @ts-ignore
 export const GRID_BREAKPOINTS_KEYS_LIST: GridBreakpointType[] =
@@ -53,11 +61,11 @@ export const setGridColCount = (gridColCount) => {
   return GRID_COL_COUNT;
 };
 
-export const getGridGutter = (gridGutter) => {
+export const getGridGutter = () => GRID_GUTTER;
+export const setGridGutter = (gridGutter) => {
   GRID_GUTTER = gridGutter;
   return GRID_GUTTER;
 };
-export const setGridGutter = () => GRID_GUTTER;
 
 const SPACER = 16;
 export const GUTTERS = {
@@ -67,4 +75,10 @@ export const GUTTERS = {
   3: SPACER,
   4: SPACER * 1.5,
   5: SPACER * 3,
+};
+
+export const getContainerPaddingHorizontalMap = () => CONTAINER_PADDING_HORIZONTAL_MAP;
+export const setContainerPaddingHorizontalMap = (containerPaddingHorizontalMap) => {
+  CONTAINER_PADDING_HORIZONTAL_MAP = containerPaddingHorizontalMap;
+  return CONTAINER_PADDING_HORIZONTAL_MAP;
 };
