@@ -1,17 +1,18 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
+import { getColWidth } from '../../../utils/responsive';
 
-export declare interface ColProps {};
+export declare interface ColProps extends ViewProps { };
 
 const styles = StyleSheet.create({
   col: {
-    flex: 1,
+    // flex: 1,
   }
 });
 
-const Col = () => (
-  <View style={styles.col}>
-  </View>
-);
+const Col = (props: ColProps) => {
+  const { style, ...rest } = props;
+  return (<View style={[styles.col, { width: getColWidth(props) }, style]} {...rest} />);
+}
 
 export default Col;

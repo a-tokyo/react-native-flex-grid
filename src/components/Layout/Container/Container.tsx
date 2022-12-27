@@ -1,17 +1,18 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
 
-export declare interface RowProps {};
+export declare interface ContainerProps extends ViewProps {
+  Element?: React.ElementType;
+};
 
 const styles = StyleSheet.create({
-  row: {
-    flex: 1,
+  container: {
+    paddingHorizontal: 20,
   }
 });
 
-const Container = () => (
-  <View style={styles.row}>
-  </View>
+const Container = ({ style, Element = View, ...rest }: ContainerProps) => (
+  <Element style={styles.container} {...rest} />
 );
 
 export default Container;

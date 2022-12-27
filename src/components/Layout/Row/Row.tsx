@@ -1,17 +1,19 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
 
-export declare interface RowProps {};
+export declare interface RowProps extends ViewProps {};
 
 const styles = StyleSheet.create({
   row: {
-    flex: 1,
-  }
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: '100%',
+    // marginHorizontal: -1 * GRID_GUTTER;
+  },
 });
 
-const Row = () => (
-  <View style={styles.row}>
-  </View>
+const Row = ({ style, ...rest }: RowProps) => (
+  <View style={[styles.row, style]} {...rest} />
 );
 
 export default Row;

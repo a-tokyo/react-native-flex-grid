@@ -13,13 +13,13 @@
     "android": "yarn update-stories; expo start --android",
     "ios": "yarn update-stories; expo start --ios",
     "web": "yarn update-stories; expo start --web",
+    "build": "bob build",
+    "prepublish": "node ./scripts/prep-package.js",
     "eject": "expo eject",
     "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "prepublish": "node ./scripts/prep-package.js",
-    "prepare": "bob build"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {},
   "devDependencies": {
