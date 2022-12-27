@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, ViewProps } from 'react-native';
+import { View, ViewProps } from 'react-native';
 
-import { GUTTERS, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint, getGridColCount } from '../../../utils/responsive';
+import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint, getGridColCount } from '../../../utils/responsive';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */
@@ -40,12 +40,6 @@ export declare interface ColProps extends ViewProps {
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
 };
 
-const styles = StyleSheet.create({
-  col: {
-    paddingHorizontal: GUTTERS[4] / 2,
-  }
-});
-
 /** converts decimal to percent string */
 const _toPercent = (num: number): string => `${num * 100}%`;
 
@@ -83,7 +77,7 @@ export const getColStyle = (props): Object => {
     ) {
       style = {
         ...style,
-        width: _toPercent(Number(props[element]) / getGridColCount()),
+        width: _toPercent(Number(props[element]) / getConfig().colCount),
       }
       break;
     }
@@ -141,8 +135,8 @@ export const getColStyle = (props): Object => {
 /** Column */
 const Col = (props: ColProps) => {
   const { style, Element = View, gx = 4, ...rest } = props;
-  return (<Element style={[styles.col, gx ? {
-    paddingHorizontal: GUTTERS[gx] / 2,
+  return (<Element style={[gx ? {
+    paddingHorizontal: getConfig().gutters[gx] / 2,
   } : undefined, getColStyle(props), style]} {...rest} />);
 }
 

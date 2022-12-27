@@ -3,7 +3,7 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 import { Dimensions } from 'react-native';
 
 
-import { getGridBreakpoint, getContainerPaddingHorizontalMap, getContainerMaxWidthsMap } from '../../../utils/responsive';
+import { getGridBreakpoint, getConfig } from '../../../utils/responsive';
 
 export declare interface ContainerProps extends ViewProps {
   /** Fluid Container */
@@ -26,10 +26,12 @@ const styles = StyleSheet.create({
 
 /** Container */
 const Container = ({ style, fluid, Element = View, noPadding, ...rest }: ContainerProps) => {
+  /** Grid config */
+  const gridConfig = getConfig();
   /** current grid breakpoint */
   const gridBreakpoint = getGridBreakpoint();
   /** container maxWidth */
-  const maxWidth = getContainerMaxWidthsMap[gridBreakpoint];
+  const maxWidth = gridConfig.containerMaxWidths[gridBreakpoint];
   /** screen width */
   const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -37,7 +39,7 @@ const Container = ({ style, fluid, Element = View, noPadding, ...rest }: Contain
     <Element
       style={[
         styles.container,
-        noPadding ? null : { paddingHorizontal: getContainerPaddingHorizontalMap()[gridBreakpoint] },
+        noPadding ? null : { paddingHorizontal: gridConfig.containerPaddingsHorizontal[gridBreakpoint] },
         fluid ? styles.fluid : {
           maxWidth,
           marginHorizontal: typeof maxWidth === 'number' ? (SCREEN_WIDTH - maxWidth) / 2 : undefined,
