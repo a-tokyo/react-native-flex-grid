@@ -113,6 +113,10 @@ setConfig({
 });
 ```
 
+#### API
+- getConfig: returns config object
+- setConfig: modifies config object
+
 ### Helpful resources
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
