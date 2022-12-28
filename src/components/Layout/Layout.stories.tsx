@@ -25,13 +25,13 @@ export default {
 const LayoutStory = () => (
   <Container fluid>
     <Row>
-      <Col style={styles.col}>.col</Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
     </Row>
     <Row>
-      <Col style={styles.col}>.col</Col>
-      <Col style={styles.col}>.col</Col>
-      <Col style={styles.col}>.col</Col>
-      <Col style={styles.col}>.col</Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
     </Row>
     <Row>
       <Col style={styles.col} xs="3">
