@@ -90,7 +90,7 @@
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "react": ">17",
+    "react": ">16",
     "react-native": ">0.60"
   },
   "react-native-builder-bob": {
