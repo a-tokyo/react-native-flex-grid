@@ -1,13 +1,4 @@
-import { Dimensions } from 'react-native';
-
 export declare type GridBreakpointType = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-export declare interface GridBreakpointsType {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-}
 
 export declare interface GRID_CONFIG_TYPE {
   breakpoints: { [key in GridBreakpointType]: number };
@@ -15,6 +6,14 @@ export declare interface GRID_CONFIG_TYPE {
   gutters: { [key: number]: number };
   containerMaxWidths: { [key in GridBreakpointType]: number | string };
   containerPaddingsHorizontal: { [key in GridBreakpointType]: number | string };
+}
+
+export declare interface GRID_CONFIG_INPUT_TYPE {
+  breakpoints?: { [key in GridBreakpointType]: number };
+  colCount?: number;
+  gutters?: { [key: number]: number };
+  containerMaxWidths?: { [key in GridBreakpointType]: number | string };
+  containerPaddingsHorizontal?: { [key in GridBreakpointType]: number | string };
 }
 
 /** Base spacer -- equivalent to HTML font-size and rem */
@@ -62,29 +61,10 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
 /** Get Grid configuration */
 export const getConfig = (): GRID_CONFIG_TYPE => GRID_CONFIG;
 /** Set Grid configuration - extends existing configuration */
-export const setConfig = (newConfig): GRID_CONFIG_TYPE => {
+export const setConfig = (newConfig: GRID_CONFIG_INPUT_TYPE): GRID_CONFIG_TYPE => {
   GRID_CONFIG = {
     ...GRID_CONFIG,
     ...newConfig,
   };
   return GRID_CONFIG;
-};
-
-/** Grid Breakpoints keys list */
-// @ts-ignore
-export const GRID_BREAKPOINTS_KEYS_LIST: GridBreakpointType[] = Object.keys(
-  GRID_CONFIG.breakpoints,
-).reverse();
-
-/** Get current Grid Breakpoint */
-export const getGridBreakpoint = (): GridBreakpointType => {
-  const SCREEN_WIDTH = Dimensions.get('window').width;
-  for (let i = 0; i < GRID_BREAKPOINTS_KEYS_LIST.length; i += 1) {
-    if (
-      SCREEN_WIDTH >= GRID_CONFIG.breakpoints[GRID_BREAKPOINTS_KEYS_LIST[i]]
-    ) {
-      return GRID_BREAKPOINTS_KEYS_LIST[i];
-    }
-  }
-  return GRID_BREAKPOINTS_KEYS_LIST[0];
 };

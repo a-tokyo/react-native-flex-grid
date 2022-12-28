@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 import { Container, Row, Col } from '.';
-import { getGridBreakpoint } from '../../utils/grid';
+import { getGridBreakpoint } from '../../utils/responsive';
 
 const styles = StyleSheet.create({
   col: {
@@ -17,7 +17,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Layout',
+        component: 'Layout  [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout)',
       },
     },
   },

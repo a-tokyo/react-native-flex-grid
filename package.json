@@ -1,6 +1,7 @@
 {
   "name": "react-native-flex-grid",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "A react-native flexbox grid similar to bootstap's web grid.",
   "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
@@ -27,7 +28,7 @@
     "prepublish": "yarn prep-package build",
     "test": "jest",
     "eject": "expo eject",
-    "update-stories": "sb-rn-get-stories --config-path .storybook-ondevice",
+    "update-stories": "node ./scripts/prep-story-readme.js; sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -128,7 +129,8 @@
     "expo",
     "framework",
     "customizable",
-    "configurable"
+    "configurable",
+    "zero-dependency"
   ],
   "license": "MIT",
   "contributors": [

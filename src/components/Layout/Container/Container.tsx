@@ -3,7 +3,8 @@ import { StyleSheet, View, ViewProps } from 'react-native';
 import { Dimensions } from 'react-native';
 
 
-import { getGridBreakpoint, getConfig } from '../../../utils/grid';
+import { getConfig } from '../../../utils/grid';
+import { getGridBreakpoint } from '../../../utils/responsive';
 
 export declare interface ContainerProps extends ViewProps {
   /** Fluid Container */
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   }
 });
 
-/** Container */
+/** Container [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/containers) */
 const Container = ({ style, fluid, Element = View, noPadding, ...rest }: ContainerProps) => {
   /** Grid config */
   const gridConfig = getConfig();
