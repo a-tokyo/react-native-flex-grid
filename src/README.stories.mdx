@@ -28,17 +28,67 @@ yarn add react-native-flex-grid
 import { Container, Row, Col } from 'react-native-flex-grid';
 
 const MyComponent = (
-  <Container fluid>        
+  <Container fluid>
     <Row>
-      <Col sm={6} md={4} lg={3}>
+      <Col style={styles.col}><Text>.col</Text></Col>
+    </Row>
+    <Row>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}><Text>.col</Text></Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} xs="3">
         <Text>
-          First Column
+          .col-3
         </Text>
       </Col>
-      <Col sm={6} md={4} lg={3}>
-        <Text>
-          Second Column
-        </Text>
+      <Col style={styles.col} xs="auto">
+        <Text>.col-auto - variable width content</Text>
+      </Col>
+      <Col style={styles.col} xs="3">
+        <Text>.col-3</Text>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} xs="6">
+        <Text>.col-6</Text>
+      </Col>
+      <Col style={styles.col} xs="6">
+        <Text>.col-6</Text>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} xs="6" sm="4">
+        <Text>.col-6 .col-sm-4</Text>
+      </Col>
+      <Col style={styles.col} xs="6" sm="4">
+        <Text>.col-6 .col-sm-4</Text>
+      </Col>
+      <Col style={styles.col} sm="4">
+        <Text>.col-sm-4</Text>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} sm={5} smOrder={2} smOffset={1}>
+        <Text>.col-sm-5 .order-sm-2 .offset-sm-1</Text>
+      </Col>
+      <Col style={styles.col} sm={5} smOrder={1} smOffset={1}>
+        <Text>.col-sm-5 .order-sm-1 .offset-sm-1</Text>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} md={6} mdOffset={3} sm={12}>
+        <Text>.col-sm-12 .col-md-6 .offset-md-3</Text>
+      </Col>
+    </Row>
+    <Row>
+      <Col style={styles.col} sm="auto" smOffset={1}>
+        <Text>.col-sm-auto .offset-sm-1</Text>
+      </Col>
+      <Col style={styles.col} sm="auto" smOffset={1}>
+        <Text>.col-sm-auto .offset-sm-1</Text>
       </Col>
     </Row>
   </Container>

@@ -99,5 +99,25 @@
       "typescript"
     ]
   },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native-web",
+    "grid",
+    "layout",
+    "flex",
+    "flexbox",
+    "flexbox-grid",
+    "design",
+    "style",
+    "bootstrap",
+    "12-columns",
+    "n-columns",
+    "demo",
+    "storybook",
+    "typescript",
+    "flowtype",
+    "expo"
+  ],
   "license": "MIT"
 }

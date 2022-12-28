@@ -55,10 +55,10 @@ const LayoutStory = () => (
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} sm="4" xs="6">
+      <Col style={styles.col} xs="6" sm="4">
         <Text>.col-6 .col-sm-4</Text>
       </Col>
-      <Col style={styles.col} sm="4" xs="6">
+      <Col style={styles.col} xs="6" sm="4">
         <Text>.col-6 .col-sm-4</Text>
       </Col>
       <Col style={styles.col} sm="4">
