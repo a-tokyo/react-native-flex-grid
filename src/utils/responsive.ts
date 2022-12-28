@@ -7,21 +7,21 @@ import {
 
 /** Grid Breakpoints keys list */
 // @ts-ignore
-export const GRID_BREAKPOINTS_KEYS_LIST: GridBreakpointType[] = Object.keys(
+export const GRID_BREAKPOINTS_KEYS_LIST_DESC: GridBreakpointType[] = Object.keys(
   getConfig().breakpoints,
 ).reverse();
 
 /** Get current Grid Breakpoint */
 export const getGridBreakpoint = (): GridBreakpointType => {
   const SCREEN_WIDTH = Dimensions.get('window').width;
-  for (let i = 0; i < GRID_BREAKPOINTS_KEYS_LIST.length; i += 1) {
+  for (let i = 0; i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length; i += 1) {
     if (
-      SCREEN_WIDTH >= getConfig().breakpoints[GRID_BREAKPOINTS_KEYS_LIST[i]]
+      SCREEN_WIDTH >= getConfig().breakpoints[GRID_BREAKPOINTS_KEYS_LIST_DESC[i]]
     ) {
-      return GRID_BREAKPOINTS_KEYS_LIST[i];
+      return GRID_BREAKPOINTS_KEYS_LIST_DESC[i];
     }
   }
-  return GRID_BREAKPOINTS_KEYS_LIST[0];
+  return GRID_BREAKPOINTS_KEYS_LIST_DESC[0];
 };
 
 /** Media Query to check for the grid breakpoint matching current screen size. */
@@ -44,16 +44,16 @@ export const mediaQuery = ({
   } else if (down) {
     // handle down case
     if (
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(breakpoint) >=
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(down)
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(breakpoint) >=
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(down)
     ) {
       return true;
     }
   } else if (up) {
     // handle up case
     if (
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(breakpoint) <=
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(down)
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(breakpoint) <=
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(down)
     ) {
       return true;
     }
@@ -84,16 +84,16 @@ export const mediaQueryStyle = ({
   } else if (down) {
     // handle down case
     if (
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(breakpoint) >=
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(down)
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(breakpoint) >=
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(down)
     ) {
       return style;
     }
   } else if (up) {
     // handle up case
     if (
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(breakpoint) <=
-      GRID_BREAKPOINTS_KEYS_LIST.indexOf(down)
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(breakpoint) <=
+      GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(down)
     ) {
       return style;
     }

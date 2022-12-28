@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ViewProps } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
-import { getGridBreakpoint, GRID_BREAKPOINTS_KEYS_LIST } from '../../../utils/responsive';
+import { getGridBreakpoint, GRID_BREAKPOINTS_KEYS_LIST_DESC } from '../../../utils/responsive';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */
@@ -60,11 +60,11 @@ export const getColStyle = (props): Object => {
 
   // handle size
   for (
-    let i = GRID_BREAKPOINTS_KEYS_LIST.indexOf(gridBreakpoint);
-    i < GRID_BREAKPOINTS_KEYS_LIST.length;
+    let i = GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(gridBreakpoint);
+    i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length;
     i += 1
   ) {
-    const element = GRID_BREAKPOINTS_KEYS_LIST[i];
+    const element = GRID_BREAKPOINTS_KEYS_LIST_DESC[i];
     if (props[element] === 'auto') {
       style = {
         ...style,
@@ -94,11 +94,11 @@ export const getColStyle = (props): Object => {
 
   // handle offset
   for (
-    let i = GRID_BREAKPOINTS_KEYS_LIST.indexOf(gridBreakpoint);
-    i < GRID_BREAKPOINTS_KEYS_LIST.length;
+    let i = GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(gridBreakpoint);
+    i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length;
     i += 1
   ) {
-    const element = `${GRID_BREAKPOINTS_KEYS_LIST[i]}Offset`;
+    const element = `${GRID_BREAKPOINTS_KEYS_LIST_DESC[i]}Offset`;
     if (
       typeof props[element] === 'number' ||
       typeof props[element] === 'string'
@@ -113,11 +113,11 @@ export const getColStyle = (props): Object => {
 
   // handle order
   for (
-    let i = GRID_BREAKPOINTS_KEYS_LIST.indexOf(gridBreakpoint);
-    i < GRID_BREAKPOINTS_KEYS_LIST.length;
+    let i = GRID_BREAKPOINTS_KEYS_LIST_DESC.indexOf(gridBreakpoint);
+    i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length;
     i += 1
   ) {
-    const element = `${GRID_BREAKPOINTS_KEYS_LIST[i]}Order`;
+    const element = `${GRID_BREAKPOINTS_KEYS_LIST_DESC[i]}Order`;
     if (
       typeof props[element] === 'number' ||
       typeof props[element] === 'string'
