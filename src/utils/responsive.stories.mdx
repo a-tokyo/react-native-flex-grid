@@ -60,9 +60,9 @@ Media Query to check for the grid breakpoint matching current screen size and re
     item: {
       backgroundColor: 'blue',
       height: 50,
-      ...mediaQuery({ down: 'sm', { width: 20 } }), // `{ width: 20 }` or `null`
-      ...mediaQuery({ up: 'md', { width: 30 } }), // `{ width: 30 }` or `null`
-      ...mediaQuery({ exact: 'xl', { width: 40 } }), // `{ width: 40 }` or `null`
+      ...mediaQueryStyle({ down: 'sm', { width: 20 } }), // `{ width: 20 }` or `null`
+      ...mediaQueryStyle({ up: 'md', { width: 30 } }), // `{ width: 30 }` or `null`
+      ...mediaQueryStyle({ exact: 'xl', { width: 40 } }), // `{ width: 40 }` or `null`
     },
   })
 
