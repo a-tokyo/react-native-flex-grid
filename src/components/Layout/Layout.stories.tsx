@@ -17,7 +17,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Layout',
+        component: 'Layout  [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout)',
       },
     },
   },

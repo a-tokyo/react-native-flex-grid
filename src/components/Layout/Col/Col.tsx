@@ -133,7 +133,7 @@ export const getColStyle = (props): Object => {
   return style;
 };
 
-/** Column */
+/** Column [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/columns) */
 const Col = (props: ColProps) => {
   const { style, Element = View, gx = 4, ...rest } = props;
   return (<Element style={[gx ? {

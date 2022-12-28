@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   }
 });
 
-/** Container */
+/** Container [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/containers) */
 const Container = ({ style, fluid, Element = View, noPadding, ...rest }: ContainerProps) => {
   /** Grid config */
   const gridConfig = getConfig();

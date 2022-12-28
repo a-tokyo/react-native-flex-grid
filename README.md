@@ -100,7 +100,7 @@ export default MyComponent;
 ```
 
 ### Modifying Grid Configuration
-The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app)
+The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-grid--page)
 
 
 ### Development
