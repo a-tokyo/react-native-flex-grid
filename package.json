@@ -13,6 +13,10 @@
     "type": "git",
     "url": "https://github.com/a-tokyo/react-native-flex-grid.git"
   },
+  "homepage": "https://react-native-flex-grid.netlify.app",
+  "bugs": {
+    "url": "https://github.com/a-tokyo/react-native-flex-grid/issues"
+  },
   "scripts": {
     "start": "yarn prep-package expo; yarn update-stories; expo start",
     "android": "yarn prep-package expo; yarn update-stories; expo start --android",
