@@ -33,64 +33,64 @@ import { Container, Row, Col } from 'react-native-flex-grid';
 const MyComponent = (
   <Container fluid>
     <Row>
-      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col><Text>.col</Text></Col>
     </Row>
     <Row>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col><Text>.col</Text></Col>
+      <Col><Text>.col</Text></Col>
+      <Col><Text>.col</Text></Col>
+      <Col><Text>.col</Text></Col>
     </Row>
     <Row>
-      <Col style={styles.col} xs="3">
+      <Col xs="3">
         <Text>
           .col-3
         </Text>
       </Col>
-      <Col style={styles.col} xs="auto">
+      <Col xs="auto">
         <Text>.col-auto - variable width content</Text>
       </Col>
-      <Col style={styles.col} xs="3">
+      <Col xs="3">
         <Text>.col-3</Text>
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} xs="6">
+      <Col xs="6">
         <Text>.col-6</Text>
       </Col>
-      <Col style={styles.col} xs="6">
+      <Col xs="6">
         <Text>.col-6</Text>
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} xs="6" sm="4">
+      <Col xs="6" sm="4">
         <Text>.col-6 .col-sm-4</Text>
       </Col>
-      <Col style={styles.col} xs="6" sm="4">
+      <Col xs="6" sm="4">
         <Text>.col-6 .col-sm-4</Text>
       </Col>
-      <Col style={styles.col} sm="4">
+      <Col sm="4">
         <Text>.col-sm-4</Text>
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} sm={5} smOrder={2} smOffset={1}>
+      <Col sm={5} smOrder={2} smOffset={1}>
         <Text>.col-sm-5 .order-sm-2 .offset-sm-1</Text>
       </Col>
-      <Col style={styles.col} sm={5} smOrder={1} smOffset={1}>
+      <Col sm={5} smOrder={1} smOffset={1}>
         <Text>.col-sm-5 .order-sm-1 .offset-sm-1</Text>
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} md={6} mdOffset={3} sm={12}>
+      <Col md={6} mdOffset={3} sm={12}>
         <Text>.col-sm-12 .col-md-6 .offset-md-3</Text>
       </Col>
     </Row>
     <Row>
-      <Col style={styles.col} sm="auto" smOffset={1}>
+      <Col sm="auto" smOffset={1}>
         <Text>.col-sm-auto .offset-sm-1</Text>
       </Col>
-      <Col style={styles.col} sm="auto" smOffset={1}>
+      <Col sm="auto" smOffset={1}>
         <Text>.col-sm-auto .offset-sm-1</Text>
       </Col>
     </Row>
