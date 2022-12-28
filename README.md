@@ -177,15 +177,15 @@ setConfig({
   - ```
     yarn storybook
     ```
-- To run expo
+- To run expo locally
   - ```
     yarn start
     ```
-- To run ios
+- To run ios locally
   - ```
     yarn ios
     ```
-- To run android
+- To run android locally
   - ```
     yarn android
     ```
