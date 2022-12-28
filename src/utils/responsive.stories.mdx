@@ -1,0 +1,61 @@
+<Meta title="utils/responsive" />
+
+### Useful responsive utils
+
+A set of useful utilities for responsive design.
+
+#### mediaQuery
+Media Query to check for the grid breakpoint matching current screen size.
+- input:
+  ```ts
+  ({
+    up, // media query for this breakpoint and upwards
+    down, // media query for this breakpoint and downwards
+    exact, // media query for this breakpoint exactly
+  }: {
+    up: GridBreakpointType;
+    down: GridBreakpointType;
+    exact: GridBreakpointType;
+  }) => boolean,
+  ```
+- output:
+  ```ts
+  boolean // whether the mediaQuery matches or not
+  ```
+- example:
+  ```ts
+  import { mediaQuery } from 'react-native-flex-grid';
+
+  mediaQuery({ up: 'sm' }); // true or false
+  mediaQuery({ down: 'md' }); // true or false
+  mediaQuery({ exact: 'lg' }); // true or false
+  ```
+
+#### mediaQueryStyle
+Media Query to check for the grid breakpoint matching current screen size and return style.
+- input:
+  ```ts
+  ({
+    up, // media query for this breakpoint and upwards
+    down, // media query for this breakpoint and downwards
+    exact, // media query for this breakpoint exactly
+    style, // style object to return if media query matches
+  }: {
+    up: GridBreakpointType;
+    down: GridBreakpointType;
+    exact: GridBreakpointType;
+    style: Object;
+  }) => Object | null,
+  ```
+- output:
+  ```ts
+  Object | null // returns style object if media query matches or null otherwise
+  ```
+- example:
+  ```ts
+  import { mediaQueryStyle } from 'react-native-flex-grid';
+
+  mediaQuery({ up: 'sm', { width: 20 } }); // `{ width: 20 }` or `null`
+  mediaQuery({ down: 'md', { width: 20 } }); // `{ width: 20 }` or `null`
+  mediaQuery({ exact: 'lg', { width: 20 } }); // `{ width: 20 }` or `null`
+  ```

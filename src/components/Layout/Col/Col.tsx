@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, ViewProps } from 'react-native';
 
-import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint } from '../../../utils/grid';
+import { getConfig } from '../../../utils/grid';
+import { getGridBreakpoint, GRID_BREAKPOINTS_KEYS_LIST } from '../../../utils/responsive';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */
@@ -46,7 +47,7 @@ const _toPercent = (num: number): string => `${num * 100}%`;
 /** 
  * Gets column style
  */
-const _getColStyle = (props): Object => {
+export const getColStyle = (props): Object => {
   const gridBreakpoint = getGridBreakpoint();
 
   /** style object */
@@ -137,7 +138,7 @@ const Col = (props: ColProps) => {
   const { style, Element = View, gx = 4, ...rest } = props;
   return (<Element style={[gx ? {
     paddingHorizontal: getConfig().gutters[gx] / 2,
-  } : undefined, _getColStyle(props), style]} {...rest} />);
+  } : undefined, getColStyle(props), style]} {...rest} />);
 }
 
 export default Col;
