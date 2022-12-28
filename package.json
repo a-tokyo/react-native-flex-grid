@@ -1,7 +1,7 @@
 {
   "name": "react-native-flex-grid",
-  "version": "0.0.4",
-  "description": "A react-native flexbox grid similar to bootstap's web grid.",
+  "version": "0.0.5",
+  "description": "🎨 A react-native flexbox grid similar to bootstap's web grid.",
   "main": "lib/commonsjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
