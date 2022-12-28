@@ -42,7 +42,7 @@ describe('<Container />', () => {
         children: <Text>test</Text>,
         Element: ScrollView,
         style: {
-          padding: 0
+          padding: 0,
         },
       }),
     );

@@ -2,7 +2,7 @@
   "name": "react-native-flex-grid",
   "version": "0.0.4",
   "description": "A react-native flexbox grid similar to bootstap's web grid.",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "lib/commonsjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "files": [
@@ -31,7 +31,8 @@
     "update-stories": "node ./scripts/prep-story-readme.js; sb-rn-get-stories --config-path .storybook-ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .storybook-ondevice",
     "storybook": "yarn update-stories; start-storybook -p 6006",
-    "build-storybook": "yarn update-stories; build-storybook"
+    "build-storybook": "yarn update-stories; build-storybook",
+    "prepare": "husky install"
   },
   "dependencies": {},
   "devDependencies": {
@@ -65,15 +66,32 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^29.2.4",
     "@types/react-native": "~0.70.6",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "^29.3.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.18.10",
     "edit-json-file": "^1.7.0",
+    "eslint": "^8.23.0",
+    "eslint-config-plural": "^0.5.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-perf": "^3.3.0",
+    "eslint-plugin-storybook": "^0.6.7",
     "expo": "^47.0.0",
     "expo-status-bar": "~1.4.2",
+    "husky": "^8.0.2",
     "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.20",
     "postcss-loader": "^7.0.2",
+    "prettier": "2.8.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
@@ -107,6 +125,15 @@
       ],
       "module",
       "typescript"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{scss,css,md,mdx}": [
+      "prettier --write ."
+    ],
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "eslint . --fix",
+      "prettier --write ."
     ]
   },
   "keywords": [

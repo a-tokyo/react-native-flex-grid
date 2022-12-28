@@ -1,4 +1,5 @@
 # react-native-flex-grid
+
 A react-native flexbox grid similar to [bootstap](https://getbootstrap.com)'s web grid.
 
 <a href="https://npmjs.com/package/react-native-flex-grid">
@@ -18,34 +19,46 @@ Check the [DEMO](https://react-native-flex-grid.netlify.app), built with [Storyb
 ## Installation
 
 NPM:
+
 ```bash
 npm install --save react-native-flex-grid
 ```
+
 YARN:
+
 ```bash
 yarn add react-native-flex-grid
 ```
 
 ## Usage
+
 ```jsx
 import { Container, Row, Col } from 'react-native-flex-grid';
 
 const MyComponent = (
   <Container fluid>
     <Row>
-      <Col><Text>.col</Text></Col>
+      <Col>
+        <Text>.col</Text>
+      </Col>
     </Row>
     <Row>
-      <Col><Text>.col</Text></Col>
-      <Col><Text>.col</Text></Col>
-      <Col><Text>.col</Text></Col>
-      <Col><Text>.col</Text></Col>
+      <Col>
+        <Text>.col</Text>
+      </Col>
+      <Col>
+        <Text>.col</Text>
+      </Col>
+      <Col>
+        <Text>.col</Text>
+      </Col>
+      <Col>
+        <Text>.col</Text>
+      </Col>
     </Row>
     <Row>
       <Col xs="3">
-        <Text>
-          .col-3
-        </Text>
+        <Text>.col-3</Text>
       </Col>
       <Col xs="auto">
         <Text>.col-auto - variable width content</Text>
@@ -101,17 +114,22 @@ export default MyComponent;
 ```
 
 ### Modifying Grid Configuration
+
 The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-grid--page)
 
 ### Responsive utils
+
 Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-responsive--page) for a set of useful responsive utilities like css/scss like media queries.
 
 ### Development
+
 Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/development--page) to understand how to run the repo locally and how to develop with it.
 
 ### Helpful resources
+
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
 
 ### Contributing
+
 Pull requests are highly appreciated! For major changes, please open an issue first to discuss what you would like to change.

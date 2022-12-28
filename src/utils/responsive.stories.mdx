@@ -5,7 +5,9 @@
 A set of useful utilities for responsive design. [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/breakpoints)
 
 #### mediaQuery
+
 Media Query to check for the grid breakpoint matching current screen size.
+
 - input:
   ```ts
   ({
@@ -20,9 +22,10 @@ Media Query to check for the grid breakpoint matching current screen size.
   ```
 - output:
   ```ts
-  boolean // whether the mediaQuery matches or not
+  boolean; // whether the mediaQuery matches or not
   ```
 - example:
+
   ```ts
   import { mediaQuery } from 'react-native-flex-grid';
 
@@ -32,7 +35,9 @@ Media Query to check for the grid breakpoint matching current screen size.
   ```
 
 #### mediaQueryStyle
+
 Media Query to check for the grid breakpoint matching current screen size and return style.
+
 - input:
   ```ts
   ({
@@ -49,9 +54,10 @@ Media Query to check for the grid breakpoint matching current screen size and re
   ```
 - output:
   ```ts
-  Object | null // returns style object if media query matches or null otherwise
+  Object | null; // returns style object if media query matches or null otherwise
   ```
 - example:
+
   ```ts
   import { StyleSheet } from 'react-native';
   import { mediaQueryStyle } from 'react-native-flex-grid';
@@ -64,7 +70,7 @@ Media Query to check for the grid breakpoint matching current screen size and re
       ...mediaQueryStyle({ up: 'md', style: { width: 30 } }), // `{ width: 30 }` or `null`
       ...mediaQueryStyle({ exact: 'xl', style: { width: 40 } }), // `{ width: 40 }` or `null`
     },
-  })
+  });
 
-  const Item = () => <View style={styles.item} />
+  const Item = () => <View style={styles.item} />;
   ```
