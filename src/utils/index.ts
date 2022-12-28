@@ -1,1 +1,1 @@
-export * from './responsive';
+export * from './grid';

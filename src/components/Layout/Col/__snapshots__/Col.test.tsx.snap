@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Col /> renders basic props correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "paddingHorizontal": 12,
+      },
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

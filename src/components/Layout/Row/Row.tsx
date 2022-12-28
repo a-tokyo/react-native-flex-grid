@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, ViewProps } from 'react-native';
 
-import { GUTTERS } from '../../../utils/responsive';
+import { getConfig } from '../../../utils/grid';
 
 export declare interface RowProps extends ViewProps {
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 /** Row */
 const Row = ({ style, gx = 4, ...rest }: RowProps) => (
   <View style={[styles.row, gx ? {
-    marginHorizontal: -1 * GUTTERS[gx] / 2,
+    marginHorizontal: -1 * getConfig().gutters[gx] / 2,
   } : undefined, style]} {...rest} />
 );
 

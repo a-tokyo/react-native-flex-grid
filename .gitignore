@@ -13,3 +13,10 @@ web-build/
 
 # macOS
 .DS_Store
+
+# tests
+coverage/
+
+# Storybook
+storybook-static/
+storybook.requires.js

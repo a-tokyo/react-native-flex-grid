@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> renders basic props correctly - Element - style 1`] = `
+<RCTScrollView
+  style={
+    [
+      {
+        "justifySelf": "center",
+        "width": "100%",
+      },
+      {
+        "paddingHorizontal": 20,
+      },
+      {
+        "marginHorizontal": undefined,
+        "maxWidth": "100%",
+      },
+    ]
+  }
+>
+  <View>
+    <Text>
+      test
+    </Text>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`<Container /> renders basic props correctly - fluid - noPadding 1`] = `
+<View
+  style={
+    [
+      {
+        "justifySelf": "center",
+        "width": "100%",
+      },
+      null,
+      {
+        "maxWidth": "100%",
+      },
+    ]
+  }
+>
+  <Text>
+    test
+  </Text>
+</View>
+`;
+
+exports[`<Container /> renders basic props correctly - fluid 1`] = `
+<View
+  style={
+    [
+      {
+        "justifySelf": "center",
+        "width": "100%",
+      },
+      {
+        "paddingHorizontal": 20,
+      },
+      {
+        "maxWidth": "100%",
+      },
+    ]
+  }
+>
+  <Text>
+    test
+  </Text>
+</View>
+`;
+
+exports[`<Container /> renders basic props correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "justifySelf": "center",
+        "width": "100%",
+      },
+      {
+        "paddingHorizontal": 20,
+      },
+      {
+        "marginHorizontal": undefined,
+        "maxWidth": "100%",
+      },
+    ]
+  }
+/>
+`;
