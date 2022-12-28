@@ -171,6 +171,25 @@ setConfig({
 - getConfig: returns config object
 - setConfig: modifies config object
 
+
+### Development
+- To run Storybook locally on [localhost:6006](localhost:6006)
+  - ```
+    yarn storybook
+    ```
+- To run expo
+  - ```
+    yarn start
+    ```
+- To run ios
+  - ```
+    yarn ios
+    ```
+- To run android
+  - ```
+    yarn android
+    ```
+
 ### Helpful resources
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
