@@ -6,8 +6,13 @@
   "react-native": "src/index.ts",
   "files": [
     "src",
-    "lib"
+    "lib",
+    "!**/stories.*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-tokyo/react-native-flex-grid.git"
+  },
   "scripts": {
     "start": "yarn prep-package expo; yarn update-stories; expo start",
     "android": "yarn prep-package expo; yarn update-stories; expo start --android",
@@ -26,8 +31,6 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.19.3",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-private-property-in-object": "^7.20.5",
     "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-native-community/datetimepicker": "6.5.2",
     "@react-native-community/slider": "4.2.4",

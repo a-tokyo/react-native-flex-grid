@@ -9,8 +9,8 @@ import packageJson from '../package.json';
  */
 export default create({
   base: 'light',
-  // brandTitle: 'React Native Flex Grid',
-  // brandUrl: packageJson.repository.url.replace('.git', ''),
+  brandTitle: 'react-native-flex-grid',
+  brandUrl: packageJson.repository.url.replace('.git', ''),
   // brandImage: '',
   // brandTarget: '_self', // open in same tab
 });

@@ -13,7 +13,7 @@ exports[`<Container /> renders basic props correctly - Element - style 1`] = `
       },
       {
         "marginHorizontal": undefined,
-        "maxWidth": undefined,
+        "maxWidth": "100%",
       },
     ]
   }
@@ -83,7 +83,7 @@ exports[`<Container /> renders basic props correctly 1`] = `
       },
       {
         "marginHorizontal": undefined,
-        "maxWidth": undefined,
+        "maxWidth": "100%",
       },
     ]
   }

@@ -8,9 +8,6 @@ exports[`<Col /> renders basic props correctly 1`] = `
         "paddingHorizontal": 12,
       },
       {
-        "paddingHorizontal": 12,
-      },
-      {
         "flex": 1,
       },
       undefined,

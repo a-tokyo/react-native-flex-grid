@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ViewProps } from 'react-native';
 
-import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint, getGridColCount } from '../../../utils/grid';
+import { getConfig, GRID_BREAKPOINTS_KEYS_LIST, getGridBreakpoint } from '../../../utils/grid';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */
@@ -104,7 +104,7 @@ const _getColStyle = (props): Object => {
     ) {
       style = {
         ...style,
-        marginLeft: _toPercent(Number(props[element]) / getGridColCount()),
+        marginLeft: _toPercent(Number(props[element]) / getConfig().colCount),
       }
       break;
     }

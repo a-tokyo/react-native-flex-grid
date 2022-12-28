@@ -18,7 +18,7 @@ export declare interface GRID_CONFIG_TYPE {
 }
 
 /** Base spacer -- equivalent to HTML font-size and rem */
-const SPACER = 16;
+export const SPACER = 16;
 
 /** Grid configuration */
 let GRID_CONFIG: GRID_CONFIG_TYPE = {
