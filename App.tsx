@@ -1,5 +1,6 @@
 import React from "react";
 import { Platform, StatusBar, View } from "react-native";
+
 import StorybookUIRoot from "./.storybook-ondevice/Storybook";
 
 export default () => (
