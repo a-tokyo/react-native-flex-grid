@@ -116,7 +116,10 @@
     "storybook",
     "typescript",
     "flowtype",
-    "expo"
+    "expo",
+    "framework",
+    "customizable",
+    "configurable"
   ],
   "license": "MIT"
 }
