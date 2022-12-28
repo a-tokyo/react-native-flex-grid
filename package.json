@@ -129,7 +129,8 @@
     "expo",
     "framework",
     "customizable",
-    "configurable"
+    "configurable",
+    "zero-dependency"
   ],
   "license": "MIT",
   "contributors": [
