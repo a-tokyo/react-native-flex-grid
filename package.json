@@ -1,13 +1,14 @@
 {
   "name": "react-native-flex-grid",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "🎨 A react-native flexbox grid similar to bootstap's web grid.",
   "main": "lib/commonsjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "files": [
     "src",
-    "lib"
+    "lib",
+    "!lib/**/*.stories.js"
   ],
   "repository": {
     "type": "git",
