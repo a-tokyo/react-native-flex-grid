@@ -53,9 +53,19 @@ Media Query to check for the grid breakpoint matching current screen size and re
   ```
 - example:
   ```ts
+  import { StyleSheet } from 'react-native';
   import { mediaQueryStyle } from 'react-native-flex-grid';
 
-  mediaQuery({ up: 'sm', { width: 20 } }); // `{ width: 20 }` or `null`
-  mediaQuery({ down: 'md', { width: 20 } }); // `{ width: 20 }` or `null`
-  mediaQuery({ exact: 'lg', { width: 20 } }); // `{ width: 20 }` or `null`
+  const styles = StyleSheet.create({
+    item: {
+      backgroundColor: 'blue',
+      height: 50,
+      ...mediaQuery({ down: 'sm', { width: 20 } }), // `{ width: 20 }` or `null`
+      ...mediaQuery({ up: 'md', { width: 30 } }), // `{ width: 30 }` or `null`
+      ...mediaQuery({ exact: 'xl', { width: 40 } }), // `{ width: 40 }` or `null`
+    },
+  })
+
+  const Item = () => <View style={styles.item} />
+
   ```
