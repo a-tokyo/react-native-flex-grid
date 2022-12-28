@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 import { Container, Row, Col } from '.';
+import { getGridBreakpoint } from '../../utils/grid';
 
 const styles = StyleSheet.create({
   col: {
@@ -24,6 +25,9 @@ export default {
 
 const LayoutStory = () => (
   <Container fluid>
+    <Row>
+      <Col style={styles.col}><Text>Grid Breakpoint: {getGridBreakpoint()}</Text></Col>
+    </Row>
     <Row>
       <Col style={styles.col}><Text>.col</Text></Col>
     </Row>
