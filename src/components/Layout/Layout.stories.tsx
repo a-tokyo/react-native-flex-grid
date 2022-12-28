@@ -17,7 +17,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Layout  [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout)',
+        component:
+          'Layout  [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout)',
       },
     },
   },
@@ -26,22 +27,32 @@ export default {
 const LayoutStory = () => (
   <Container fluid>
     <Row>
-      <Col style={styles.col}><Text>Grid Breakpoint: {getGridBreakpoint()}</Text></Col>
+      <Col style={styles.col}>
+        <Text>Grid Breakpoint: {getGridBreakpoint()}</Text>
+      </Col>
     </Row>
     <Row>
-      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}>
+        <Text>.col</Text>
+      </Col>
     </Row>
     <Row>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
-      <Col style={styles.col}><Text>.col</Text></Col>
+      <Col style={styles.col}>
+        <Text>.col</Text>
+      </Col>
+      <Col style={styles.col}>
+        <Text>.col</Text>
+      </Col>
+      <Col style={styles.col}>
+        <Text>.col</Text>
+      </Col>
+      <Col style={styles.col}>
+        <Text>.col</Text>
+      </Col>
     </Row>
     <Row>
       <Col style={styles.col} xs="3">
-        <Text>
-          .col-3
-        </Text>
+        <Text>.col-3</Text>
       </Col>
       <Col style={styles.col} xs="auto">
         <Text>.col-auto - variable width content</Text>

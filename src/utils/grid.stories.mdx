@@ -1,7 +1,8 @@
 <Meta title="utils/grid" />
 
 ### Modifying Grid Configuration
-The grid is 100% modifiable, all values can be found in the config object in `src/utils/grid`.  [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/grid)
+
+The grid is 100% modifiable, all values can be found in the config object in `src/utils/grid`. [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/grid)
 
 ```js
 /** Grid configuration */
@@ -45,6 +46,7 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
 ```
 
 To modify grid configuration, add these lines somewhere in your app before rendering the grid, eg: in App.js or in wrapper components:
+
 ```js
 import { setConfig } from 'react-native-flex-grid';
 
@@ -69,5 +71,6 @@ setConfig({
 ```
 
 #### API
+
 - getConfig: returns config object
 - setConfig: modifies config object

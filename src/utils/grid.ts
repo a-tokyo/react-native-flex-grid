@@ -13,7 +13,9 @@ export declare interface GRID_CONFIG_INPUT_TYPE {
   colCount?: number;
   gutters?: { [key: number]: number };
   containerMaxWidths?: { [key in GridBreakpointType]: number | string };
-  containerPaddingsHorizontal?: { [key in GridBreakpointType]: number | string };
+  containerPaddingsHorizontal?: {
+    [key in GridBreakpointType]: number | string;
+  };
 }
 
 /** Base spacer -- equivalent to HTML font-size and rem */
@@ -61,7 +63,9 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
 /** Get Grid configuration */
 export const getConfig = (): GRID_CONFIG_TYPE => GRID_CONFIG;
 /** Set Grid configuration - extends existing configuration */
-export const setConfig = (newConfig: GRID_CONFIG_INPUT_TYPE): GRID_CONFIG_TYPE => {
+export const setConfig = (
+  newConfig: GRID_CONFIG_INPUT_TYPE,
+): GRID_CONFIG_TYPE => {
   GRID_CONFIG = {
     ...GRID_CONFIG,
     ...newConfig,

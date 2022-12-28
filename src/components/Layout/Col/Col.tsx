@@ -2,7 +2,10 @@ import React from 'react';
 import { View, ViewProps } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
-import { getGridBreakpoint, GRID_BREAKPOINTS_KEYS_LIST_DESC } from '../../../utils/responsive';
+import {
+  getGridBreakpoint,
+  GRID_BREAKPOINTS_KEYS_LIST_DESC,
+} from '../../../utils/responsive';
 
 export declare interface ColProps extends ViewProps {
   /** xs size */
@@ -39,12 +42,12 @@ export declare interface ColProps extends ViewProps {
   Element?: React.ElementType;
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
-};
+}
 
 /** converts decimal to percent string */
 const _toPercent = (num: number): string => `${num * 100}%`;
 
-/** 
+/**
  * Gets column style
  */
 export const getColStyle = (props): Object => {
@@ -69,7 +72,7 @@ export const getColStyle = (props): Object => {
       style = {
         ...style,
         flex: 1,
-      }
+      };
       break;
     }
     if (
@@ -79,7 +82,7 @@ export const getColStyle = (props): Object => {
       style = {
         ...style,
         width: _toPercent(Number(props[element]) / getConfig().colCount),
-      }
+      };
       break;
     }
   }
@@ -106,7 +109,7 @@ export const getColStyle = (props): Object => {
       style = {
         ...style,
         marginLeft: _toPercent(Number(props[element]) / getConfig().colCount),
-      }
+      };
       break;
     }
   }
@@ -125,7 +128,7 @@ export const getColStyle = (props): Object => {
       style = {
         ...style,
         order: Number(props[element]),
-      }
+      };
       break;
     }
   }
@@ -136,9 +139,20 @@ export const getColStyle = (props): Object => {
 /** Column [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/columns) */
 const Col = (props: ColProps) => {
   const { style, Element = View, gx = 4, ...rest } = props;
-  return (<Element style={[gx ? {
-    paddingHorizontal: getConfig().gutters[gx] / 2,
-  } : undefined, getColStyle(props), style]} {...rest} />);
-}
+  return (
+    <Element
+      style={[
+        gx
+          ? {
+              paddingHorizontal: getConfig().gutters[gx] / 2,
+            }
+          : undefined,
+        getColStyle(props),
+        style,
+      ]}
+      {...rest}
+    />
+  );
+};
 
 export default Col;

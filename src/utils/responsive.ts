@@ -1,22 +1,19 @@
 import { Dimensions } from 'react-native';
 
-import {
-  GridBreakpointType,
-  getConfig,
-} from './grid';
+import { GridBreakpointType, getConfig } from './grid';
 
 /** Grid Breakpoints keys list */
 // @ts-ignore
-export const GRID_BREAKPOINTS_KEYS_LIST_DESC: GridBreakpointType[] = Object.keys(
-  getConfig().breakpoints,
-).reverse();
+export const GRID_BREAKPOINTS_KEYS_LIST_DESC: GridBreakpointType[] =
+  Object.keys(getConfig().breakpoints).reverse();
 
 /** Get current Grid Breakpoint */
 export const getGridBreakpoint = (): GridBreakpointType => {
   const SCREEN_WIDTH = Dimensions.get('window').width;
   for (let i = 0; i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length; i += 1) {
     if (
-      SCREEN_WIDTH >= getConfig().breakpoints[GRID_BREAKPOINTS_KEYS_LIST_DESC[i]]
+      SCREEN_WIDTH >=
+      getConfig().breakpoints[GRID_BREAKPOINTS_KEYS_LIST_DESC[i]]
     ) {
       return GRID_BREAKPOINTS_KEYS_LIST_DESC[i];
     }

@@ -1,7 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ViewProps } from 'react-native';
-import { Dimensions } from 'react-native';
-
+import { Dimensions, StyleSheet, View, ViewProps } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
 import { getGridBreakpoint } from '../../../utils/responsive';
@@ -13,7 +11,7 @@ export declare interface ContainerProps extends ViewProps {
   noPadding?: boolean;
   /** Element to render */
   Element?: React.ElementType;
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,11 +20,17 @@ const styles = StyleSheet.create({
   },
   fluid: {
     maxWidth: '100%',
-  }
+  },
 });
 
 /** Container [Bootstrap Docs](https://getbootstrap.com/docs/5.0/layout/containers) */
-const Container = ({ style, fluid, Element = View, noPadding, ...rest }: ContainerProps) => {
+const Container = ({
+  style,
+  fluid,
+  Element = View,
+  noPadding,
+  ...rest
+}: ContainerProps) => {
   /** Grid config */
   const gridConfig = getConfig();
   /** current grid breakpoint */
@@ -40,15 +44,25 @@ const Container = ({ style, fluid, Element = View, noPadding, ...rest }: Contain
     <Element
       style={[
         styles.container,
-        noPadding ? null : { paddingHorizontal: gridConfig.containerPaddingsHorizontal[gridBreakpoint] },
-        fluid ? styles.fluid : {
-          maxWidth,
-          marginHorizontal: typeof maxWidth === 'number' ? (SCREEN_WIDTH - maxWidth) / 2 : undefined,
-        },
+        noPadding
+          ? null
+          : {
+              paddingHorizontal:
+                gridConfig.containerPaddingsHorizontal[gridBreakpoint],
+            },
+        fluid
+          ? styles.fluid
+          : {
+              maxWidth,
+              marginHorizontal:
+                typeof maxWidth === 'number'
+                  ? (SCREEN_WIDTH - maxWidth) / 2
+                  : undefined,
+            },
       ]}
       {...rest}
     />
   );
-}
+};
 
 export default Container;
