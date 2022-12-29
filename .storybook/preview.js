@@ -1,3 +1,5 @@
+import { GRID_CONTAINER } from './utils/grid';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -11,4 +13,5 @@ export const parameters = {
       order: ['README', 'components', 'utils'],
     },
   },
+  grid: GRID_CONTAINER,
 };

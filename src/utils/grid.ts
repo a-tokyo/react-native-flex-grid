@@ -1,5 +1,7 @@
+/** Grid breakpoints available */
 export declare type GridBreakpointType = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
+/** Grid configuration type */
 export declare interface GRID_CONFIG_TYPE {
   breakpoints: { [key in GridBreakpointType]: number };
   colCount: number;
@@ -8,6 +10,7 @@ export declare interface GRID_CONFIG_TYPE {
   containerPaddingsHorizontal: { [key in GridBreakpointType]: number | string };
 }
 
+/** Grid configuration input type for overrides */
 export declare interface GRID_CONFIG_INPUT_TYPE {
   breakpoints?: { [key in GridBreakpointType]: number };
   colCount?: number;
@@ -52,7 +55,7 @@ let GRID_CONFIG: GRID_CONFIG_TYPE = {
   },
   /** Container paddings horizontal */
   containerPaddingsHorizontal: {
-    xs: 18,
+    xs: 16,
     sm: 20,
     md: 40,
     lg: 48,
