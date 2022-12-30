@@ -1,6 +1,6 @@
 {
   "name": "react-native-flex-grid",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "🎨 A react-native flexbox grid similar to bootstap's web grid.",
   "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
@@ -22,7 +22,7 @@
     "android": "yarn prep-package expo; yarn update-stories; expo start --android",
     "ios": "yarn prep-package expo; yarn update-stories; expo start --ios",
     "web": "yarn prep-package expo; yarn update-stories; expo start --web",
-    "build": "bob build",
+    "build": "bob build &&  find ./lib -name *.stories.* -type f -exec rm -rf {} +",
     "prep-package": "node ./scripts/prep-package.js",
     "prepublish": "yarn prep-package build",
     "test": "jest",
