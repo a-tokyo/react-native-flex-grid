@@ -70,6 +70,59 @@ setConfig({
 });
 ```
 
+example for wrapping library with a custom config:
+
+```ts
+// Layout.ts
+import { setConfig } from 'react-native-flex-grid';
+
+/** Base spacer -- equivalent to HTML font-size and rem */
+const SPACER = 16;
+
+/** override react-native-flex-grid config */
+setConfig({
+  /** Grid Breakpoints */
+  breakpoints: {
+    xs: 0,
+    sm: 375,
+    md: 768,
+    lg: 1024,
+    xl: 1200,
+  },
+  /** Grid column count */
+  colCount: 12,
+  /** Common gutters used */
+  gutters: {
+    0: 0,
+    1: SPACER * 0.25,
+    2: SPACER * 0.5,
+    3: SPACER,
+    4: SPACER * 1.5,
+    5: SPACER * 3,
+  },
+  /** Container max widths */
+  containerMaxWidths: {
+    xs: '100%',
+    sm: '100%',
+    md: '100%',
+    lg: '100%',
+    xl: 1140,
+  },
+  /** Container paddings horizontal */
+  containerPaddingsHorizontal: {
+    xs: 16,
+    sm: 20,
+    md: 40,
+    lg: 48,
+    xl: 48,
+  },
+});
+
+// export all from react native flex grid, now this file becomes our new entry point.
+// later we can: `import { Container, Row, Col } from '../Layout'`
+export * from 'react-native-flex-grid';
+```
+
 #### API
 
 - getConfig: returns config object
