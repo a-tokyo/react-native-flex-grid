@@ -1,6 +1,6 @@
 import './styles/index.scss';
 
-import { GRID_CONTAINER } from './utils/grid';
+import { GRID_CONTAINER_FLUID } from './utils/grid';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -15,5 +15,5 @@ export const parameters = {
       order: ['README', 'components', 'utils'],
     },
   },
-  grid: GRID_CONTAINER,
+  grid: GRID_CONTAINER_FLUID,
 };
