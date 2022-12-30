@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     justifySelf: 'center',
+    // flex: 1,
   },
   fluid: {
     maxWidth: '100%',
