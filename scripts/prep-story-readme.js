@@ -13,8 +13,6 @@ const main = () => {
   /** Modified Story file text */
   const storyFileText = `<Meta title="README" />
 
-//This file is auto generated from README.md -- any manual changes will be discarded
-
 ${readmeFile
   // for subpaths
   .replaceAll(`${packageJson.homepage}/`, '/')
@@ -23,7 +21,7 @@ ${readmeFile
 
   /** Write story file */
   fs.writeFileSync(
-    path.join(__dirname, '../src/README.stories.mdx'),
+    path.join(__dirname, '../src/README.generated.stories.mdx'),
     storyFileText,
     'utf8',
   );

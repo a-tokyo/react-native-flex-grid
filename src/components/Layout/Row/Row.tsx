@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    width: '100%',
+    flex: 1,
   },
 });
 

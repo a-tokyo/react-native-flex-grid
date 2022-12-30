@@ -1,3 +1,5 @@
+import './styles/index.scss';
+
 import { GRID_CONTAINER } from './utils/grid';
 
 export const parameters = {

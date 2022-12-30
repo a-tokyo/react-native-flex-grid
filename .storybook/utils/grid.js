@@ -17,7 +17,7 @@ export const GRID_CONTAINER_FLUID = {
   ...GRID_BASE,
   maxWidth: '100%', // max-width
 };
-export const GRID_CONTAINER_NO_PADDING = {
+export const GRID_CONTAINER_GX_0 = {
   ...GRID_BASE,
-  gutter: '0', // padding horizontal
+  gutter: 0, // padding horizontal
 };
