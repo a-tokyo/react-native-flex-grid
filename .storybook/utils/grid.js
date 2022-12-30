@@ -7,6 +7,7 @@ export const GRID_BASE = {
   // storybook-addon-grid
   columns: 'var(--sb-grid-columns)', // columns count
   gap: 'var(--sb-grid-gap)', // gutter
+  maxWidth: '100%', // max-width
 };
 export const GRID_CONTAINER = {
   ...GRID_BASE,
@@ -15,7 +16,7 @@ export const GRID_CONTAINER = {
 };
 export const GRID_CONTAINER_FLUID = {
   ...GRID_BASE,
-  maxWidth: '100%', // max-width
+  gutter: 'var(--sb-grid-gutter)', // padding horizontal
 };
 export const GRID_CONTAINER_GX_0 = {
   ...GRID_BASE,
