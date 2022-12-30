@@ -8,25 +8,25 @@
 
 @media only screen and (min-width: 375px) {
   :root {
-  --sb-grid-gutter: 1.25rem;
+    --sb-grid-gutter: 1.25rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   :root {
-  --sb-grid-gutter: 2.5rem;
+    --sb-grid-gutter: 2.5rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   :root {
-  --sb-grid-gutter: 3rem;
+    --sb-grid-gutter: 3rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   :root {
-  --sb-grid-gutter: 3rem;
-  --sb-grid-max-width: 1140px;
+    --sb-grid-gutter: 3rem;
+    --sb-grid-max-width: 1140px;
   }
 }
