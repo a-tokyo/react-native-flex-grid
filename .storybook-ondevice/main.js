@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
     // replace with '../src/**/*.stories.*' once storybook supports mdx syntax for react-native
-    '../src/**/*.stories.?(ts|tsx|js|jsx)'
+    '../src/**/*.stories.?(ts|tsx|js|jsx)',
   ],
   addons: [
     '@storybook/addon-ondevice-notes',
