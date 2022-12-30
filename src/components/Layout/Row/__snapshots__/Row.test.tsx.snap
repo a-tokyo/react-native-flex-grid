@@ -5,9 +5,9 @@ exports[`<Row /> renders basic props correctly 1`] = `
   style={
     [
       {
+        "flex": 1,
         "flexDirection": "row",
         "flexWrap": "wrap",
-        "width": "100%",
       },
       {
         "marginHorizontal": -12,
