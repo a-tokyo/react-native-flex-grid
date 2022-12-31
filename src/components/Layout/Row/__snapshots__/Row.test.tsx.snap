@@ -8,6 +8,7 @@ exports[`<Row /> renders basic props correctly 1`] = `
         "flexDirection": "row",
         "flexWrap": "wrap",
       },
+      false,
       {
         "marginHorizontal": -12,
       },

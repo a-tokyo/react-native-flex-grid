@@ -45,6 +45,8 @@ export declare interface ColProps extends ViewProps {
   Element?: React.ElementType;
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** Direction */
+  dir?: 'ltr' | 'rtl';
 }
 
 /** converts decimal to percent string */
@@ -63,6 +65,7 @@ export const getColStyle = (props): Object => {
   let style: {
     width?: string | number;
     marginLeft?: string | number;
+    marginRight?: string | number;
     flex?: string | number;
     order?: number;
     paddingHorizontal?: number;
@@ -117,7 +120,9 @@ export const getColStyle = (props): Object => {
     ) {
       style = {
         ...style,
-        marginLeft: _toPercent(Number(props[element]) / config.colCount),
+        [props.dir === 'rtl' ? 'marginRight' : 'marginLeft']: _toPercent(
+          Number(props[element]) / config.colCount,
+        ),
       };
       break;
     }
