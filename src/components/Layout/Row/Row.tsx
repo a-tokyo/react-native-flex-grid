@@ -8,6 +8,8 @@ export declare interface RowProps extends ViewProps {
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
   /** Direction */
   dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
 }
 
 const styles = StyleSheet.create({
@@ -21,16 +23,20 @@ const styles = StyleSheet.create({
 });
 
 /** Row */
-const Row = ({ style, gx = 4, dir = 'ltr', ...rest }: RowProps) => (
-  <View
+const Row = ({
+  style,
+  gx = 4,
+  dir = 'ltr',
+  Element = View,
+  ...rest
+}: RowProps) => (
+  <Element
     style={[
       styles.row,
       dir === 'rtl' && styles.rtl,
-      gx
-        ? {
-            marginHorizontal: (-1 * getConfig().gutters[gx]) / 2,
-          }
-        : undefined,
+      gx && {
+        marginHorizontal: (-1 * getConfig().gutters[gx]) / 2,
+      },
       style,
     ]}
     {...rest}

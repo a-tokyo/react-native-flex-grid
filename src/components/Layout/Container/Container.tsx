@@ -9,7 +9,7 @@ export declare interface ContainerProps extends ViewProps {
   fluid?: boolean;
   /** No Padding */
   noPadding?: boolean;
-  /** Element to render */
+  /** Element to render - defaults to View */
   Element?: React.ElementType;
 }
 

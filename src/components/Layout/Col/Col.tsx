@@ -41,12 +41,12 @@ export declare interface ColProps extends ViewProps {
   lgOrder?: number | string;
   /** xl order */
   xlOrder?: number | string;
-  /** Element to render */
-  Element?: React.ElementType;
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
   /** Direction */
   dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
 }
 
 /** converts decimal to percent string */
