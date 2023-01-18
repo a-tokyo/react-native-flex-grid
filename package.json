@@ -1,6 +1,6 @@
 {
   "name": "react-native-flex-grid",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "description": "🎨 A react-native flexbox grid similar to bootstap's web grid.",
   "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/a-tokyo/react-native-flex-grid.git"
   },
-  "homepage": "https://react-native-flex-grid.netlify.app",
+  "homepage": "https://a-tokyo.github.io/react-native-flex-grid",
   "bugs": {
     "url": "https://github.com/a-tokyo/react-native-flex-grid/issues"
   },
