@@ -130,7 +130,7 @@ Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/s
 - [Blogpost](https://www.notion.so/ahmedtokyo/React-Native-Flex-Grid-6932aa014d274ae7940595664873b7dd)
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
-- [React Native Extended StyleSheet] https://github.com/vitalets/react-native-extended-stylesheet
+- [React Native Extended StyleSheet](https://github.com/vitalets/react-native-extended-stylesheet)
 
 ### Contributing
 
