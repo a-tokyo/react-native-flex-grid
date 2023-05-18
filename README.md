@@ -113,6 +113,73 @@ const MyComponent = (
 export default MyComponent;
 ```
 
+#### Component Props - can be used to customize Layout components
+Container
+```tsx
+export declare interface ContainerProps extends ViewProps {
+  /** Fluid Container */
+  fluid?: boolean;
+  /** No Padding */
+  noPadding?: boolean;
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
+Row
+```tsx
+export declare interface RowProps extends ViewProps {
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
+  gx?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** Direction */
+  dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
+Col
+```tsx
+export declare interface ColProps extends ViewProps {
+  /** xs size */
+  xs?: number | string;
+  /** sm size */
+  sm?: number | string;
+  /** md size */
+  md?: number | string;
+  /** lg size */
+  lg?: number | string;
+  /** xl size */
+  xl?: number | string;
+  /** xs offset */
+  xsOffset?: number | string;
+  /** sm offset */
+  smOffset?: number | string;
+  /** md offset */
+  mdOffset?: number | string;
+  /** lg offset */
+  lgOffset?: number | string;
+  /** xl offset */
+  xlOffset?: number | string;
+  /** xs order */
+  xsOrder?: number | string;
+  /** sm order */
+  smOrder?: number | string;
+  /** md order */
+  mdOrder?: number | string;
+  /** lg order */
+  lgOrder?: number | string;
+  /** xl order */
+  xlOrder?: number | string;
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
+  gx?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** Direction */
+  dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
 ### Modifying Grid Configuration
 
 The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-grid--page)
