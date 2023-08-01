@@ -15,11 +15,11 @@ A react-native flexbox grid similar to [bootstap](https://getbootstrap.com)'s we
   ></img>
 </a>
 
-<a href="/">
+<a href="https://react-native-flex-grid.netlify.app">
   <img src="https://i.imgur.com/VWFX2r6.png"></img>
 </a>
 
-Check the [DEMO](/), built with [Storybook](https://storybook.js.org) and [react-native-web](https://necolas.github.io/react-native-web).
+Check the [DEMO](https://react-native-flex-grid.netlify.app), built with [Storybook](https://storybook.js.org) and [react-native-web](https://necolas.github.io/react-native-web).
 
 # Getting Started
 
@@ -120,23 +120,95 @@ const MyComponent = (
 export default MyComponent;
 ```
 
+#### Component Props - can be used to customize Layout components
+
+Container
+
+```tsx
+export declare interface ContainerProps extends ViewProps {
+  /** Fluid Container */
+  fluid?: boolean;
+  /** No Padding */
+  noPadding?: boolean;
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
+Row
+
+```tsx
+export declare interface RowProps extends ViewProps {
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
+  gx?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** Direction */
+  dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
+Col
+
+```tsx
+export declare interface ColProps extends ViewProps {
+  /** xs size */
+  xs?: number | string;
+  /** sm size */
+  sm?: number | string;
+  /** md size */
+  md?: number | string;
+  /** lg size */
+  lg?: number | string;
+  /** xl size */
+  xl?: number | string;
+  /** xs offset */
+  xsOffset?: number | string;
+  /** sm offset */
+  smOffset?: number | string;
+  /** md offset */
+  mdOffset?: number | string;
+  /** lg offset */
+  lgOffset?: number | string;
+  /** xl offset */
+  xlOffset?: number | string;
+  /** xs order */
+  xsOrder?: number | string;
+  /** sm order */
+  smOrder?: number | string;
+  /** md order */
+  mdOrder?: number | string;
+  /** lg order */
+  lgOrder?: number | string;
+  /** xl order */
+  xlOrder?: number | string;
+  /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
+  gx?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** Direction */
+  dir?: 'ltr' | 'rtl';
+  /** Element to render - defaults to View */
+  Element?: React.ElementType;
+}
+```
+
 ### Modifying Grid Configuration
 
-The grid is 100% modifiable, checkout the [detailed docs](/?path=/story/utils-grid--page)
+The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-grid--page)
 
 ### Responsive utils
 
-Checkout the [detailed docs](/?path=/story/utils-responsive--page) for a set of useful responsive utilities like css/scss like media queries.
+Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-responsive--page) for a set of useful responsive utilities like css/scss like media queries.
 
 ### Development
 
-Checkout the [detailed docs](/?path=/story/development--page) to understand how to run the repo locally and how to develop with it.
+Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/development--page) to understand how to run the repo locally and how to develop with it.
 
 ### Helpful resources
 
 - [Blogpost](https://www.notion.so/ahmedtokyo/React-Native-Flex-Grid-6932aa014d274ae7940595664873b7dd)
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
+- [React Native Extended StyleSheet](https://github.com/vitalets/react-native-extended-stylesheet)
 
 ### Contributing
 
