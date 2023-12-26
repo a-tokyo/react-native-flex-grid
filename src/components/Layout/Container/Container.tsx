@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, StyleSheet, View, ViewProps } from 'react-native';
+import { StyleSheet, View, ViewProps,useWindowDimensions } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
 import { getGridBreakpoint } from '../../../utils/responsive';
@@ -39,7 +39,8 @@ const Container = ({
   /** container maxWidth */
   const maxWidth = gridConfig.containerMaxWidths[gridBreakpoint];
   /** screen width */
-  const SCREEN_WIDTH = Dimensions.get('window').width;
+
+  const SCREEN_WIDTH = useWindowDimensions().width;
 
   return (
     <Element
