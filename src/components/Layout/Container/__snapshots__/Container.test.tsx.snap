@@ -15,6 +15,9 @@ exports[`<Container /> renders basic props correctly - Element - style 1`] = `
         "marginHorizontal": undefined,
         "maxWidth": "100%",
       },
+      {
+        "padding": 0,
+      },
     ]
   }
 >
@@ -38,6 +41,7 @@ exports[`<Container /> renders basic props correctly - fluid - noPadding 1`] = `
       {
         "maxWidth": "100%",
       },
+      undefined,
     ]
   }
 >
@@ -61,6 +65,7 @@ exports[`<Container /> renders basic props correctly - fluid 1`] = `
       {
         "maxWidth": "100%",
       },
+      undefined,
     ]
   }
 >
@@ -85,6 +90,7 @@ exports[`<Container /> renders basic props correctly 1`] = `
         "marginHorizontal": undefined,
         "maxWidth": "100%",
       },
+      undefined,
     ]
   }
 />
