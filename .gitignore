@@ -21,3 +21,6 @@ coverage/
 # Storybook
 storybook-static/
 storybook.requires.js
+
+# Editors
+.vscode

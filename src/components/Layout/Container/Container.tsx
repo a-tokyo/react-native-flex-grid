@@ -1,23 +1,24 @@
 import React from 'react';
-import { StyleSheet, View, ViewProps,useWindowDimensions } from 'react-native';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
 import { getGridBreakpoint } from '../../../utils/responsive';
 
-export declare interface ContainerProps extends ViewProps {
+export declare interface ContainerProps extends React.ComponentProps<typeof View> {
   /** Fluid Container */
   fluid?: boolean;
   /** No Padding */
   noPadding?: boolean;
   /** Element to render - defaults to View */
   Element?: React.ElementType;
+  /** style */
+  style: React.ComponentProps<typeof View>['style'];
 }
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
     justifySelf: 'center',
-    // flex: 1,
   },
   fluid: {
     maxWidth: '100%',
@@ -61,6 +62,7 @@ const Container = ({
                   ? (SCREEN_WIDTH - maxWidth) / 2
                   : undefined,
             },
+        style,
       ]}
       {...rest}
     />

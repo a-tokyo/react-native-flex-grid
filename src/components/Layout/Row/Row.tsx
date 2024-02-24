@@ -1,15 +1,17 @@
 import React from 'react';
-import { StyleSheet, View, ViewProps } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
 
-export declare interface RowProps extends ViewProps {
+export declare interface RowProps extends React.ComponentProps<typeof View> {
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
   /** Direction */
   dir?: 'ltr' | 'rtl';
   /** Element to render - defaults to View */
   Element?: React.ElementType;
+  /** style */
+  style: React.ComponentProps<typeof View>['style'];
 }
 
 const styles = StyleSheet.create({

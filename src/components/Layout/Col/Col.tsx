@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ViewProps } from 'react-native';
+import { View } from 'react-native';
 
 import { getConfig } from '../../../utils/grid';
 import {
@@ -10,7 +10,7 @@ import {
 /** Default gutter x size */
 const DEFAULT_GX = 4;
 
-export declare interface ColProps extends ViewProps {
+export declare interface ColProps extends React.ComponentProps<typeof View> {
   /** xs size */
   xs?: number | string;
   /** sm size */
@@ -47,6 +47,8 @@ export declare interface ColProps extends ViewProps {
   dir?: 'ltr' | 'rtl';
   /** Element to render - defaults to View */
   Element?: React.ElementType;
+  /** style */
+  style: React.ComponentProps<typeof View>['style'];
 }
 
 /** converts decimal to percent string */
