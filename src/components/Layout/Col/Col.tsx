@@ -48,7 +48,7 @@ export declare interface ColProps extends React.ComponentProps<typeof View> {
   /** Element to render - defaults to View */
   Element?: React.ElementType;
   /** style */
-  style: React.ComponentProps<typeof View>['style'];
+  style?: React.ComponentProps<typeof View>['style'];
 }
 
 /** converts decimal to percent string */
