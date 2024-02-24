@@ -2,7 +2,7 @@
   "name": "react-native-flex-grid",
   "version": "1.0.2",
   "description": "🎨 A react-native flexbox grid similar to bootstap's web grid.",
-  "main": "lib/commonjs/index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "types": "lib/typescript/index.d.ts",

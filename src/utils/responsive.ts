@@ -8,11 +8,13 @@ export const GRID_BREAKPOINTS_KEYS_LIST_DESC: GridBreakpointType[] =
   Object.keys(getConfig().breakpoints).reverse();
 
 /** Get current Grid Breakpoint */
-export const getGridBreakpoint = (): GridBreakpointType => {
-  const SCREEN_WIDTH = Dimensions.get('window').width;
+export const getGridBreakpoint = (
+  SCREEN_WIDTH?: number,
+): GridBreakpointType => {
+  const PARSED_SCREEN_WIDTH = SCREEN_WIDTH ?? Dimensions.get('window').width;
   for (let i = 0; i < GRID_BREAKPOINTS_KEYS_LIST_DESC.length; i += 1) {
     if (
-      SCREEN_WIDTH >=
+      PARSED_SCREEN_WIDTH >=
       getConfig().breakpoints[GRID_BREAKPOINTS_KEYS_LIST_DESC[i]]
     ) {
       return GRID_BREAKPOINTS_KEYS_LIST_DESC[i];

@@ -4,7 +4,8 @@ import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import { getConfig } from '../../../utils/grid';
 import { getGridBreakpoint } from '../../../utils/responsive';
 
-export declare interface ContainerProps extends React.ComponentProps<typeof View> {
+export declare interface ContainerProps
+  extends React.ComponentProps<typeof View> {
   /** Fluid Container */
   fluid?: boolean;
   /** No Padding */
@@ -35,13 +36,12 @@ const Container = ({
 }: ContainerProps) => {
   /** Grid config */
   const gridConfig = getConfig();
+  /** screen width */
+  const SCREEN_WIDTH = useWindowDimensions().width;
   /** current grid breakpoint */
-  const gridBreakpoint = getGridBreakpoint();
+  const gridBreakpoint = getGridBreakpoint(SCREEN_WIDTH);
   /** container maxWidth */
   const maxWidth = gridConfig.containerMaxWidths[gridBreakpoint];
-  /** screen width */
-
-  const SCREEN_WIDTH = useWindowDimensions().width;
 
   return (
     <Element
