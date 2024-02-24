@@ -116,7 +116,7 @@ export default MyComponent;
 #### Component Props - can be used to customize Layout components
 Container
 ```tsx
-export declare interface ContainerProps extends ViewProps {
+export declare interface ContainerProps extends React.ComponentProps<typeof View> {
   /** Fluid Container */
   fluid?: boolean;
   /** No Padding */
@@ -128,7 +128,7 @@ export declare interface ContainerProps extends ViewProps {
 
 Row
 ```tsx
-export declare interface RowProps extends ViewProps {
+export declare interface RowProps extends React.ComponentProps<typeof View> {
   /** Gutter size -- [Bootstrap Gutters](https://getbootstrap.com/docs/5.0/layout/gutters/) */
   gx?: 0 | 1 | 2 | 3 | 4 | 5;
   /** Direction */
@@ -140,7 +140,7 @@ export declare interface RowProps extends ViewProps {
 
 Col
 ```tsx
-export declare interface ColProps extends ViewProps {
+export declare interface ColProps extends React.ComponentProps<typeof View> {
   /** xs size */
   xs?: number | string;
   /** sm size */
