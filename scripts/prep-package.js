@@ -15,7 +15,9 @@ const packageJsonFile = editJsonFile('package.json');
 // Update `main` field to support npm package instead of expo dev
 packageJsonFile.set(
   'main',
-  args[0] === 'expo' ? 'node_modules/expo/AppEntry.js' : 'lib/commonjs/index.js',
+  args[0] === 'expo'
+    ? 'node_modules/expo/AppEntry.js'
+    : 'lib/commonjs/index.js',
 );
 
 // Save file
