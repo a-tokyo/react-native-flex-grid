@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import { Container, Row, Col } from '.';
 import { getGridBreakpoint } from '../../utils/responsive';
 
+import DesktopAd from '../DesktopAd/DesktopAd';
+
 const styles = StyleSheet.create({
   col: {
     position: 'relative',
@@ -134,6 +136,8 @@ const LayoutStory = () => {
           <Mask />
         </Col>
       </Row>
+
+      <DesktopAd />
     </Container>
   );
 };
