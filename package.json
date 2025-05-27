@@ -7,7 +7,7 @@
     "email": "ahmed.tokyo1@gmail.com",
     "url": "https://ahmedtokyo.com"
   },
-  "main": "lib/commonjs/index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.ts",
   "types": "lib/typescript/index.d.ts",
