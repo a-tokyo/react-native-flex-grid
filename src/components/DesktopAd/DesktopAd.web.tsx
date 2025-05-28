@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     marginTop: 32,
     marginBottom: 8,
     alignSelf: 'center',
+    textAlign: 'center',
     // backgroundColor: 'rgba(0,0,0,0.05)', // Optional: for debugging layout
   },
 });
