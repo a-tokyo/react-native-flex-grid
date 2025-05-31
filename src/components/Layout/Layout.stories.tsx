@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import { Container, Row, Col } from '.';
 import { getGridBreakpoint } from '../../utils/responsive';
 
-import DesktopAd from '../DesktopAd/DesktopAd';
+import WebAd from '../WebAd/WebAd';
 
 const styles = StyleSheet.create({
   col: {
@@ -137,7 +137,7 @@ const LayoutStory = () => {
         </Col>
       </Row>
 
-      <DesktopAd />
+      <WebAd />
     </Container>
   );
 };

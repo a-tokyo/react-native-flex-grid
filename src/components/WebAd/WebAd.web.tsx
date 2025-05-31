@@ -25,7 +25,7 @@ declare global {
   }
 }
 
-const DesktopAd: React.FC = () => {
+const WebAd: React.FC = () => {
   useEffect(() => {
     // The main adsbygoogle.js script is now loaded globally via preview-body.html
     // We still need to push an ad request for this specific ad unit.
@@ -55,4 +55,4 @@ const DesktopAd: React.FC = () => {
   );
 };
 
-export default DesktopAd;
+export default WebAd;

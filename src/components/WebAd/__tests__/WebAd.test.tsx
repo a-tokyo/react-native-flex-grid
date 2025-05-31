@@ -7,8 +7,8 @@ import renderer, {
 import { Platform } from 'react-native';
 
 // Import the components directly for testing
-import DesktopAdNative from '../DesktopAd'; // This will be DesktopAd.tsx
-import DesktopAdWeb from '../DesktopAd.web'; // This will be DesktopAd.web.tsx
+import WebAdNative from '../WebAd'; // This will be WebAd.tsx
+import WebAdWeb from '../WebAd.web'; // This will be WebAd.web.tsx
 
 // Global type for adsbygoogle for tests - keeping it simple to avoid conflicts
 declare global {
@@ -17,7 +17,7 @@ declare global {
   }
 }
 
-describe('DesktopAd (Native)', () => {
+describe('WebAd (Native)', () => {
   const originalPlatformOS = Platform.OS;
 
   afterEach(() => {
@@ -28,14 +28,14 @@ describe('DesktopAd (Native)', () => {
     Platform.OS = 'android';
     let tree: ReactTestRendererJSON | ReactTestRendererJSON[] | null = null;
     act(() => {
-      tree = renderer.create(<DesktopAdNative />).toJSON();
+      tree = renderer.create(<WebAdNative />).toJSON();
     });
     expect(tree).toBeNull();
     Platform.OS = originalPlatformOS; // Restore immediately after setting for the test
   });
 });
 
-describe('DesktopAd (Web)', () => {
+describe('WebAd (Web)', () => {
   let originalAdsByGoogle: any[] | undefined;
   const originalPlatformOS = Platform.OS;
   let pushSpy: jest.SpyInstance | undefined;
@@ -59,7 +59,7 @@ describe('DesktopAd (Web)', () => {
 
   it('should call adsbygoogle.push on web', () => {
     act(() => {
-      renderer.create(<DesktopAdWeb />);
+      renderer.create(<WebAdWeb />);
     });
     expect(pushSpy).toHaveBeenCalledTimes(1);
     expect(pushSpy).toHaveBeenCalledWith({});
@@ -68,7 +68,7 @@ describe('DesktopAd (Web)', () => {
   it('should render a View containing an ins-like structure for the ad on web', () => {
     let testRenderer: ReactTestRenderer | undefined;
     act(() => {
-      testRenderer = renderer.create(<DesktopAdWeb />);
+      testRenderer = renderer.create(<WebAdWeb />);
     });
 
     const tree = testRenderer ? testRenderer.toJSON() : null;
@@ -93,7 +93,7 @@ describe('DesktopAd (Web)', () => {
       }
     } else {
       throw new Error(
-        `Expected a single root element from DesktopAdWeb render, but got: ${JSON.stringify(
+        `Expected a single root element from WebAdWeb render, but got: ${JSON.stringify(
           tree,
         )}`,
       );
