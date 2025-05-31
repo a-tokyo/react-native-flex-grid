@@ -8,11 +8,11 @@ A react-native flexbox grid similar to [bootstap](https://getbootstrap.com)'s we
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=ahmad_tokyo"><img src="https://img.shields.io/twitter/follow/ahmad_tokyo.svg?label=Follow%20@ahmad_tokyo" alt="Follow @ahmad_tokyo"></img></a>
 
-<a href="https://react-native-flex-grid.netlify.app">
+<a href="https://react-native-flex-grid.ahmedtokyo.com">
 <img src="https://i.imgur.com/VWFX2r6.png"></img>
 </a>
 
-Check the [DEMO](https://react-native-flex-grid.netlify.app), built with [Storybook](https://storybook.js.org) and [react-native-web](https://necolas.github.io/react-native-web).
+Check the [DEMO](https://react-native-flex-grid.ahmedtokyo.com), built with [Storybook](https://storybook.js.org) and [react-native-web](https://necolas.github.io/react-native-web).
 
 # Getting Started
 
@@ -187,19 +187,19 @@ export declare interface ColProps extends React.ComponentProps<typeof View> {
 
 ### Modifying Grid Configuration
 
-The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-grid--page)
+The grid is 100% modifiable, checkout the [detailed docs](https://react-native-flex-grid.ahmedtokyo.com/?path=/story/utils-grid--page)
 
 ### Responsive utils
 
-Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/utils-responsive--page) for a set of useful responsive utilities like css/scss like media queries.
+Checkout the [detailed docs](https://react-native-flex-grid.ahmedtokyo.com/?path=/story/utils-responsive--page) for a set of useful responsive utilities like css/scss like media queries.
 
 ### Development
 
-Checkout the [detailed docs](https://react-native-flex-grid.netlify.app/?path=/story/development--page) to understand how to run the repo locally and how to develop with it.
+Checkout the [detailed docs](https://react-native-flex-grid.ahmedtokyo.com/?path=/story/development--page) to understand how to run the repo locally and how to develop with it.
 
 ### Helpful resources
 
-- [Blogpost](https://www.notion.so/ahmedtokyo/React-Native-Flex-Grid-6932aa014d274ae7940595664873b7dd)
+- [Blogpost](https://ahmedtokyo.com/blog/2022/react-native-flex-grid)
 - [Bootstrap layout documentation](https://getbootstrap.com/docs/5.0/layout)
 - [Reactstrap layout documentation](https://reactstrap.github.io/?path=/docs/components-layout--layout)
 - [React Native Extended StyleSheet](https://github.com/vitalets/react-native-extended-stylesheet)
